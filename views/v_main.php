@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../modules/disk.scss" />
 	</head>
 	<body class="is-preload homepage">
 		<div id="page-wrapper">
@@ -19,9 +20,14 @@
 				<div id="banner-wrapper">
 					<div id="banner" class="box container">
 						<div class="row">
+						<div class="music-player-container is-playing">
 							<div class="col-7 col-12-medium">
-								<h2>Hi. This is Verti.</h2>
-								<p>It's a free responsive site template by HTML5 UP</p>
+								<!-- <h2>Hi. This is Verti.</h2>
+								<p>It's a free responsive site template by HTML5 UP</p> -->
+									
+						<?php
+						include 'modules/disk.html';
+						?>
 							</div>
 							<div class="col-5 col-12-medium">
 								<ul>

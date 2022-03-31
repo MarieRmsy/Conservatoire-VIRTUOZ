@@ -26,7 +26,6 @@ switch($action)
 	break;
 	
 }
-include("views/v_main.php") ;
 
 include("views/v_footer.php") ;
 ?>

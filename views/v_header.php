@@ -1,4 +1,15 @@
-<div id="header-wrapper">
+<html>
+	<head>
+		<title>Virtuoz</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload homepage">
+		<div id="page-wrapper">
+			
+			<!-- Header -->
+			<div id="header-wrapper">
 					<header id="header" class="container">
 
 						<!-- Logo -->
@@ -10,7 +21,7 @@
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li class="current"><a href="index.html">Accueil</a></li>
+									<li class="current"><a href="index.php?action=main">Accueil</a></li>
 									<li>
 										<a href="index.php?action=course">Cours</a>
 										<ul>
@@ -33,4 +44,5 @@
 							</nav>
 
 					</header>
+		</div>
 </div>
