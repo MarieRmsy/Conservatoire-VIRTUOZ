@@ -17,22 +17,22 @@
 
 
 			<!-- Banner -->
+
 				<div id="banner-wrapper">
 					<div id="banner" class="box container">
 						<div class="row">
-						<div class="music-player-container is-playing">
-							<div class="col-7 col-12-medium">
-								<!-- <h2>Hi. This is Verti.</h2>
-								<p>It's a free responsive site template by HTML5 UP</p> -->
-									
-						<?php
-						include 'modules/disk.html';
-						?>
+							
+							<div class="col-4 col-12-medium">
+								<h2>Bienvenue !</h2>
+								<p style="font-size:30px;">Développez votre passion </br>pour la musique</p>
 							</div>
-							<div class="col-5 col-12-medium">
+							<div class="col-4 col-12-medium">
+								<img class="set-img" src="images/teacher.gif" alt="" />
+							</div>
+							<div class="col-4 col-12-medium">
 								<ul>
-									<li><a href="#" class="button large icon solid fa-arrow-circle-right">Ok let's go</a></li>
-									<li><a href="#" class="button alt large icon solid fa-question-circle">More info</a></li>
+									<li><a href="#" class="button large icon solid fa-arrow-circle-right">Cours</a></li>
+									<li><a href="#" class="button large alt icon solid fa-question-circle">Inscriptions</a></li>
 								</ul>
 							</div>
 						</div>

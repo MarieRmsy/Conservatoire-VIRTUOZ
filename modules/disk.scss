@@ -1,300 +1,208 @@
-/* For mHeight make sure mHeight/4 is a whole number or things will draw funny */
-$mHeight: 54px;
-$noteStemWidth: $mHeight*.05;
-$pageWidth: 800px;
-$pageHeight: $pageWidth*(11/8.5);
-@media all {
-	.page-break	{ display: none; }
+html, body {
+	overflow: hidden;
 }
 
-@media print {
-	.page-break	{ 
-    display: block; 
-    page-break-before: always; 
+body {
+	background: #58D0C5;
+}
+
+svg {
+	height: 100vh;
+	width: 100vw;
+	display: block;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+i {
+	color: $white;
+}
+i:hover {
+	color: $gray-light;
+}
+
+.notes, .sparks {
+	opacity: 0;
+}
+
+#shadow {
+	animation: shadow 4s infinite linear;
+	transform-origin: 50% 50%;
+}
+
+#guitar_2_ {
+	animation: hover 4s infinite linear;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+@keyframes hover {
+	from, to {
+		transition-timing-function: ease-in-out;
+		transform: translate3d(0,0,0);
+	}
+	50% {
+		transition-timing-function: ease-in-out;
+		transform: translate3d(0,1.5%,0);
+	}
+}
+
+@keyframes shadow {
+	from, to {
+		transition-timing-function: ease-in-out;
+		transform: scale(0.95,1);
+	}
+	50% {
+		transition-timing-function: ease-in-out;
+		transform: scale(1.05,1);
+	}
+}
+
+@mixin screen-above($screen-size) {
+    @media screen and (min-width: $screen-size) {
+      @content;
+    }
   }
-  .top-menu .top-buffer {
-    display: none;
+  
+  @mixin screen-below($screen-size) {
+    @media screen and (max-width: ($screen-size - 1px)) {
+      @content;
+    }
   }
-}
-.top-menu {
-  display:block;
-  height:100px;
-  width:100%;
-  background-color:white;
-  display:flex;
-}
-.top-buffer {
-  display: block;
-  height:30px;
-  background-color: lightgrey;
-}
-.desktop {
-  display:flex;
-  background-color:lightgrey;
-}
-.side-buffer {
-  flex:1;
-}
-.note:hover:before {
-  cursor:pointer;
-  background-color: blue;
   
-}
-#document-container {
-  position:relative;
-  width:800px;
-}
-.page {
-  display:block;
-  padding:20px;
-  background-color:white;
-  width:100%;
-  height: $pageHeight;
-  box-shadow:0px 0px 3px 3px grey;
-  margin-bottom:20px;
-
-}
-
-.staff {
-  display:flex;
-  width:100%;
-  padding-top:$mHeight/2;
-  padding-bottom:$mHeight/2;
+  $black: #000;
+  $gray-dark: #2f2f2f;
+  $gray: #555;
+  $gray-light: #f2f2f2;
+  $white: #ffffff;
   
-}
-.editable {
+  $brand-primary: #1ABC9B;
+  $brand-info: #5bc0de;
+  $brand-success: #5cb85c;
+  $brand-warning: #f0ad4e;
+  $brand-danger: #d9534f;
   
-}
-.editable.measure:hover {
-  background: linear-gradient(0,lightblue 24%, black 24%, black 26%, lightblue 26%,lightblue 49%, black 49%, black 51%, lightblue 51%,lightblue 74%, black 74%, black 76%, lightblue 76%);
-}
-
-.measure {
-  flex:1;
-  display:flex;
-  height:$mHeight;
-  border-top: $mHeight*.02 solid black;
-  border-bottom: $mHeight*.02 solid black;
-  background: linear-gradient(0,white 24%, black 24%, black 26%, white 26%,white 49%, black 49%, black 51%, white 51%,white 74%, black 74%, black 76%, white 76%)
-}
-.bar-line {
-  width: $mHeight*.05;
-  height: 100%;
-  position:relative;
-  content:"";
-  background-color:black;
-  margin-right:$mHeight/5;
- 
-}
-.right  {
-  margin-right:0px; 
-}
-.bar-line.double-left {
+  $font-base: 1rem;
+  $padding-base: 1rem;
+  $margin-base: 1rem;
+  $radius-base: 0.25rem;
   
-   box-shadow:($mHeight*.02) 0px,($mHeight/10) 0px;
-}
-.note:before {
-  top:$mHeight*-.13;
-  width: $mHeight/4;
-  height: $mHeight/4;
-  position:absolute;
-  content:"";
-  border-radius: 50%;
-  background-color:black;
+  $darken: 15%;
   
-}
-
-.dotted:before {
-  box-shadow: $mHeight*.2 $mHeight*-.06 0px $mHeight*-.08;
-}
-.double-dotted:before {
-  box-shadow: $mHeight*.2 $mHeight*-.06 0px $mHeight*-.08,
-    $mHeight*.35 $mHeight*-.06 0px $mHeight*-.08;
-}
-/* from top 'f' line to bottom of note stem is 150% of measure height */
-.ha {
-  height: 175%;
-  top:-25%;
-}
-.hg {
-  height: 163%;
-  top:-13%;
-}
-.f {
-    height: 150%;
-
-}
-.e {
-  height: 138%;
-  top:12%;
-}
-.d {
-  height: 125%;
-  top:25%;
-}
-.c {
-  height: 112%;
-  top:38%;
-}
-.b {
-  height: 100%;
-  top:50%;
-}
-.la {
-  height: 88%;
-  top:62%;          
-}
-.lg {
-  height: 75%;
-  top:75%;  
-}
-
-.note {
-  min-width: $mHeight/4;
-  flex:2;
-  float:left;
-  position:relative;
-  width: 100%;
-  box-shadow:$noteStemWidth 0px inset;
-
-}
-
-.eighth-connected{
-  flex:1;
-  box-shadow:$noteStemWidth $noteStemWidth*-1 black inset;
-}
-.eighth-connected.dotted, .eighth.dotted {
-  flex:1.5;
-}
-.eighth-connected.double-dotted, .eighth.double-dotted {
-  flex:1.7;
-}
-.sixteenth-connected{
-  flex:.6;
-  box-shadow:$noteStemWidth $noteStemWidth*-1 black inset,
-    $noteStemWidth $noteStemWidth*-2 white inset, 
-    $noteStemWidth $noteStemWidth*-3 black inset;
+  * {
+      box-sizing: border-box;
+  }
   
-}
-.sixteenth-connected.dotted, .sixteenth.dotted {
-  flex:.8;
-}
-.sixteenth-connected.double-dotted, .sixteenth.double-dotted {
-  flex:.9;
-}
-
-.thirtysecond-connected{
-  flex:.3;
-  box-shadow:$noteStemWidth $noteStemWidth*-1 black inset,
-    $noteStemWidth $noteStemWidth*-2 white inset, 
-    $noteStemWidth $noteStemWidth*-3 black inset,
-    $noteStemWidth $noteStemWidth*-4 white inset, 
-    $noteStemWidth $noteStemWidth*-5 black inset;
-}
-
-.thirtysecond {
-  flex:.3;
-}
-.thirtysecond.dotted, .thirtysecond-connected.dotted {
-  flex:.4;
-}
-
-.thirtysecond:after {
-  border-radius:$mHeight*.1;
-  bottom: 0px;
-  height: $noteStemWidth;
-  width: $mHeight/4;
-  position:absolute;
-  content:"";
-  background-color:black;
-  box-shadow:0px $noteStemWidth*-2, 0px $noteStemWidth*-4;
-}
-.sixteenth {
-  flex:.5;
-}
-
-.sixteenth:after {
-  border-radius:10px;
-  bottom: 0px;
-  height: $noteStemWidth;
-  width: $mHeight/4;
-  position:absolute;
-  content:"";
-  background-color:black;
-  box-shadow:0px $noteStemWidth*-2;
-}
-.left:after {
-  left:-$mHeight/4.5;
-
-}
-.la+:not(la):before {
-  background-color: blue;  
-}
-.eighth {
-  flex:1;
-}
-.eighth:after {
-  border-radius:10px;
-  bottom: 0px;
-  height: $noteStemWidth*1;
-  width: $mHeight/4;
-  position:absolute;
-  content:"";
-  background-color:black;
-
-}
-.time-sig:first-of-type {
-height:200%;
-}
-.time-sig {
-  height:100%;
-  margin-right: $mHeight*.1;
-}
-.time-sig:before {
-  position:relative;
-  top:$mHeight*-.1;
-  content:attr(data-time-sig-top);  
-  display:block;
-  height:50%;
-  font-size:$mHeight*.6;
-}
-.time-sig:after {
-  position:relative;
-  top:$mHeight*-.1;
-  content:attr(data-time-sig-bottom);  
-  height:50%;
-  font-size:$mHeight*.6;
-}
-
-.sharp {
-  width: $mHeight*.2;
-  position:relative;
-  margin-top:$mHeight*-.18;
-}
-.sharp + .sharp {
-  margin-right:$mHeight*.1;
-}
-
-.sharp {
-background:url(data:image/svg+xml;base64,PHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB2aWV3Qm94PSIwIDAgMjAgMzUiCj4KCiAgCiAgPGcKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiCiAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEuMDc5MzI2OSwtMTAxNy41MzM2KSI+CiAgICA8cGF0aAogICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS43MTMwNzIxODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lIgogICAgICAgZD0ibSA2LjkxMjM2NjUsMTAxOC4zMzYyIDAsMzMuNTI2IgogICAgICAgaWQ9InBhdGgyOTg1IgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIgLz4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxLjcxMzA3MjE4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmUiCiAgICAgICBkPSJtIDE2LjI0NTY2OSwxMDE4LjQ0NjkgMCwzMy40MTUzIgogICAgICAgaWQ9InBhdGgzNzc3IgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIgLz4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyLjgyNDM4OTc7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgIGQ9Im0gMi4xODY0OTE3LDEwMzEuNjQ4OSAxNy45OTE3MjEzLC03LjA0NjMiCiAgICAgICBpZD0icGF0aDM3NzkiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjIuODMxNDk1NTI7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2Utb3BhY2l0eToxO3N0cm9rZS1kYXNoYXJyYXk6bm9uZSIKICAgICAgIGQ9Ik0gMi4xODkzOTU0LDEwNDUuNzU0IDIwLjE3NTMxLDEwMzguODQyNCIKICAgICAgIGlkPSJwYXRoMzc4MSIKICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiIC8+CiAgPC9nPgo8L3N2Zz4=) no-repeat;
-}
-.clef {
-  top:$mHeight*-.35;
-  height:$mHeight*1.77;
-  width: $mHeight*.5;
-  position:relative;
-  background:url(data:image/svg+xml;base64,PHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWw6c3BhY2U9InByZXNlcnZlIgogICBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQiCiAgIHZpZXdCb3g9IjAgLTMwMiA1MCAxNzciCj48ZGVmcwogICAgIGlkPSJkZWZzNCI+PHN0eWxlCiAgICAgICB0eXBlPSJ0ZXh0L2NzcyIKICAgICAgIGlkPSJzdHlsZTYiPgogICAKICAgIC5zdHIwIHtzdHJva2U6IzEzMTUxNjtzdHJva2Utd2lkdGg6M30KICAgIC5zdHIxIHtzdHJva2U6IzEzMTUxNjtzdHJva2Utd2lkdGg6NDJ9CiAgICAuZmlsMSB7ZmlsbDpub25lfQogICAgLmZpbDAge2ZpbGw6IzEzMTUxNn0KICAgCiAgPC9zdHlsZT48L2RlZnM+PGcKICAgICBpZD0iTGF5ZXIgMSIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjAzNDQ0NDU2LDAsMCwwLjA0MzQzMjM2LC00MC43NTMxOCwtNTQ1LjI0MjU1KSI+PHBhdGgKICAgICAgIGNsYXNzPSJmaWwwIHN0cjAiCiAgICAgICBkPSJtIDIwMDIsNzg1MSBjIC02MSwxNyAtMTE2LDU1IC0xNjcsMTEzIC01MSw1OSAtNzYsMTI0IC03NiwxOTQgMCw0NCAxNSw5NCA0NCwxNDcgMjksNTQgNzMsOTMgMTMwLDExOCAxOSw0IDI4LDE0IDI4LDI4IDAsNSAtNywxMCAtMjQsMTQgLTkxLC0yMyAtMTY2LC03MiAtMjI0LC0xNDUgLTU4LC03NCAtODgsLTE1OCAtOTAsLTI1NCAzLC0xMDMgMzQsLTE5OSA5MywtMjg3IDYwLC04OSAxMzcsLTE1MiAyMzEsLTE4OSBsIC02OSwtMzU1IGMgLTE1NCwxMjggLTI3OSwyNjEgLTM3Niw0MDEgLTk3LDEzOSAtMTQ3LDI5MCAtMTUxLDQ1MyAyLDczIDE3LDE0NCA0NSwyMTIgMjgsNjkgNzAsMTMxIDEyNiwxODggMTEzLDExMyAyNjAsMTcyIDQzOSwxNzggNjEsLTQgMTI2LC0xNSAxOTYsLTMzIGwgLTE1NSwtNzgzIHogbSA3MiwtMTAgMTU2LDc2OSBjIDE1NCwtNjIgMjMxLC0xOTcgMjMxLC00MDMgLTksLTY5IC0yOSwtMTMxIC02MywtMTg2IC0zMywtNTYgLTc3LC0xMDAgLTEzMywtMTMyIC01NiwtMzIgLTExOSwtNDggLTE5MSwtNDggeiBNIDE4NjksNjgwMSBjIDMzLC0yMCA3MSwtNTUgMTEyLC0xMDQgNDEsLTQ4IDgxLC0xMDUgMTE5LC0xNjkgMzksLTY1IDcwLC0xMzEgOTMsLTE5OCAyMywtNjYgMzQsLTEyOSAzNCwtMTg3IDAsLTI1IC0yLC01MCAtNywtNzIgLTQsLTM2IC0xNSwtNjQgLTM0LC04MyAtMTksLTE4IC00MywtMjggLTczLC0yOCAtNjAsMCAtMTE0LDM3IC0xNjIsMTExIC0zNyw2NCAtNjgsMTQwIC05MCwyMjYgLTIzLDg3IC0zNiwxNzMgLTM4LDI2MCA1LDk5IDIxLDE4MCA0NiwyNDQgeiBtIC02Myw1OCBjIC00NSwtMTYyIC03MCwtMzI3IC03NSwtNDk1IDEsLTEwOCAxMiwtMjA5IDMzLC0zMDMgMjAsLTk0IDQ5LC0xNzUgODcsLTI0NSAzNywtNzAgODAsLTEyMyAxMjgsLTE1OSA0MywtMzIgNzQsLTQ5IDkxLC00OSAxMywwIDI0LDUgMzQsMTQgMTAsOSAyMywyNCAzOSw0NCAxMTksMTY5IDE3OSwzNzMgMTc5LDYxMSAwLDExMyAtMTUsMjIzIC00NSwzMzMgLTI5LDEwOSAtNzIsMjEzIC0xMjksMzEwIC01OCw5OCAtMTI2LDE4MyAtMjA1LDI1NiBsIDgxLDM5NCBjIDQ0LC01IDc0LC05IDkxLC05IDc2LDAgMTQ0LDE2IDIwNyw0OCA2MywzMiAxMTcsNzUgMTYxLDEzMCA0NCw1NCA3OCwxMTYgMTAyLDE4NiAyMyw3MCAzNiwxNDMgMzYsMjE5IDAsMTE4IC0zMSwyMjYgLTkzLDMyMyAtNjIsOTcgLTE1NSwxNjggLTI4MCwyMTQgOCw0OSAyMiwxMjAgNDMsMjExIDIwLDkyIDM1LDE2NSA0NSwyMTkgMTAsNTQgMTQsMTA2IDE0LDE1NyAwLDc5IC0xOSwxNDkgLTU3LDIxMSAtMzksNjIgLTkxLDExMCAtMTU3LDE0NCAtNjUsMzQgLTEzNyw1MSAtMjE1LDUxIC0xMTAsMCAtMjA2LC0zMSAtMjg4LC05MiAtODIsLTYyIC0xMjYsLTE0NSAtMTMwLC0yNTEgMywtNDcgMTQsLTkxIDM0LC0xMzMgMjAsLTQyIDQ3LC03NiA4MiwtMTAyIDM0LC0yNyA3NSwtNDEgMTIyLC00NCAzOSwwIDc2LDExIDExMSwzMiAzNCwyMiA2Miw1MSA4Myw4OCAyMCwzNyAzMSw3OCAzMSwxMjIgMCw1OSAtMjAsMTA5IC02MCwxNTAgLTQwLDQxIC05MSw2MiAtMTUyLDYyIGwgLTIzLDAgYyAzOSw2MCAxMDMsOTEgMTkyLDkxIDQ1LDAgOTEsLTEwIDEzNywtMjggNDcsLTE5IDg2LC00NCAxMTksLTc2IDMzLC0zMiA1NSwtNjYgNjQsLTEwMiAxNywtNDEgMjUsLTk4IDI1LC0xNjkgMCwtNDggLTUsLTk2IC0xNCwtMTQ0IC05LC00NyAtMjMsLTExMCAtNDIsLTE4OCAtMTksLTc3IC0zMywtMTM3IC00MSwtMTc4IC02MCwxNSAtMTIyLDIzIC0xODcsMjMgLTEwOSwwIC0yMTIsLTIyIC0zMDksLTY3IC05NywtNDUgLTE4MiwtMTA3IC0yNTYsLTE4NyAtNzMsLTgwIC0xMzAsLTE3MCAtMTcxLC0yNzIgLTQwLC0xMDEgLTYxLC0yMDcgLTYyLC0zMTcgNCwtMTAyIDIzLC0yMDAgNTksLTI5MiAzNiwtOTMgODIsLTE4MSAxMzksLTI2MyA1NywtODIgMTE2LC0xNTcgMTc3LC0yMjQgNjIsLTY2IDE0MywtMTUxIDI0NSwtMjU0IHoiCiAgICAgICBpZD0icGF0aDkiCiAgICAgICBzdHlsZT0iZmlsbDojMTMxNTE2O3N0cm9rZTojMTMxNTE2O3N0cm9rZS13aWR0aDozIgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIgLz48L2c+PC9zdmc+) no-repeat;
-}
-/*grace notes need a to accomidate the connected lines under them or they will be missing and there will be a space there*/
-.grace {
+  body {
+      color: $gray;
+      font-size: $font-base;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+  }
   
-  position:relative;
-  top:$mHeight*.5;
-  left:-10px;
-  width:$mHeight*.2; 
-}
-.eighth-connected+.grace {
-
-  box-shadow:0px $noteStemWidth*-1 black inset ;
-}
-
+  a {
+      color: $brand-primary;
+      text-decoration: none;
+      :hover {
+          color: darken($brand-primary, $darken);
+      }
+  }
+  
+  .centered-cover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+  }
+  
+  .break-flex {
+      flex: none;
+  }
+  
+  .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: $font-base * 1.6;
+      padding: $padding-base;
+      i {
+          font-size: $font-base * 2.5;
+      }
+      h1,h2,h3,h4,h5,h6,p {
+          display: inline;
+          color: $white;
+          margin: 0;
+          padding: 0 2rem 0 2rem;
+      }
+  }
+  
+  .form {
+      width: 100%;
+      display: block;
+      padding: $padding-base;
+      font-size: $font-base;
+      color: $gray;
+      background-color: $white;
+      border: .0625rem solid $gray-light;
+      border-radius: $radius-base;
+  }
+  
+  .btn {
+      width: auto;
+      padding: $padding-base;
+      text-decoration: none;
+      vertical-align: middle;
+      border-radius: $radius-base;
+      border: none;
+  }
+  
+  .btn-large {
+      font-size: $font-base * 1.6;
+  }
+  
+  .btn-primary {
+      color: $white;
+      background: $brand-primary;
+  }
+  
+  .btn-info {
+      color: $white;
+      background: $brand-info;
+  }
+  
+  .alert {
+      padding: $padding-base;
+      border: none;
+      h1,h2,h3,h4,h5,h6,p {
+          padding: 0;
+          margin: 0;
+      }
+  }
+  
+  .alert-info {
+      color: $white;
+      background-color: $brand-info;
+  }
+  
+  .alert-success {
+      color: $white;
+      background-color: $brand-success;
+  }
+  
+  .alert-warning {
+      color: $white;
+      background-color: $brand-warning;
+  }
+  
+  .alert-danger {
+      color: $white;
+      background-color: $brand-danger;
+  }
+  
+  .hidden {
+      display: none;
+  }
