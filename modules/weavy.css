@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo');
 
 
 .animated-text {
-  font: 3em/1.5 "Baloo";
+  font-size: 20px !important;
+  line-height: 10px !important;
+  
 }
 
 .animated-text span.letter{
   display:inline-block;
+  color: #71cbca;
 }
 
 .animated-text.wave span.letter{
-  animation: 1s wave backwards ease-in-out infinite;
+  animation: 2s wave backwards ease-in-out infinite;
 }
 
 .animated-text.flip span.letter{
@@ -30,7 +32,7 @@
     transform: translateY(0em);
   }
   50%{
-    transform: translateY(-1rem);
+    transform: translateY(-0.5rem);
   }
 }
 

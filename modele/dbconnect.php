@@ -17,9 +17,9 @@ function connectBDD(){
 }
 
 function getCourses(){
-    $req = "SELECT * FROM cours";
-    // INNER JOIN professeur ON cours.idProf = professeur.id
-        // INNER JOIN intrument ON cours.idInstru = instrument.id
+    $req = "SELECT * FROM cours
+    INNER JOIN professeur ON cours.idProf = professeur.profId
+    INNER JOIN instrument ON cours.idInstru = instrument.instruId";
 
     $exe = connectBDD()->prepare($req);
     $exe->execute();

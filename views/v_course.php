@@ -7,6 +7,7 @@
 
 									<!-- Sidebar -->
 										<section>
+											
 											<h3>Subheading</h3>
 											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
 											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
@@ -39,19 +40,36 @@
 
 											<h2>Cours :</h2>
 
-											<ul>
-											<?php
-											foreach($get_Course as $cours){
-												echo "<li>Horaire : ".$cours["horaires"]
-												// ."<br>Nombre de places : ".$cours["nbPlace"]
-												//."<br>Professeur (id) : ".$cours["idProfesseur"]
-												// ."<br>Professeur : ".$cours["nom"]
-												// //."<br>Instrument (id) : ".$cours["idInstrument"]
-												// ."<br>Professeur : ".$cours["instrument_nom"]
-												."</li>";
-											}
-											?>
-											</ul>
+											
+											<table>
+												<thead>
+													<tr>
+														<th>Numéro</th>
+														<th>Date</th>
+														
+														<th>Instrument</th>
+														<th>Places</th>
+														<th>Professeur</th>
+														<th>Rejoindre</th>
+													</tr>
+												</thead>
+												<tbody>
+													<?php 
+													foreach ($get_Course as $cours) :?>
+													
+													<tr class="item_row">
+															<td> <?php echo $cours[0]; ?></td>
+															<td> <?php echo $cours[1]; ?></td>
+															<td> <?php echo $cours[9]; ?></td>
+															<td> <?php echo $cours[2]; ?></td>
+															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?></td>
+															<td>Inscription</td>
+													</tr>
+													<?php endforeach;?>
+												</tbody>
+												
+											</table>
+
 											
 
 											<h3>More intriguing information</h3>

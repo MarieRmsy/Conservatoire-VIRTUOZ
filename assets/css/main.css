@@ -1577,7 +1577,7 @@ input, select, textarea {
 		}
 
 		table thead {
-			background: #404248;
+			background: #71cbca;
 			color: #fff;
 		}
 
@@ -1956,7 +1956,7 @@ input, select, textarea {
 			letter-spacing: 0.025em;
 			font-size: 0.9em;
 			vertical-align: middle;
-			margin: 0 0 0 1.25em;
+			margin: 0 0 0 0.15em;
 		}
 
 /* Nav */
