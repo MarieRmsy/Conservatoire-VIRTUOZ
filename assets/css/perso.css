@@ -2,3 +2,16 @@
     max-height: 300px;
     /* margin-top: -50px; */
 }
+
+.set-img:hover {
+    opacity: 80%;
+}
+
+.set-aca {
+    color: #444; 
+    font-size:30px !important; 
+    line-height: 10px !important;
+    margin-left: 10px !important;
+
+}
+

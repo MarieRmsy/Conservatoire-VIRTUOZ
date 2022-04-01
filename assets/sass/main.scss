@@ -115,8 +115,9 @@
 		background-position: top left, top left;
 		background-repeat: repeat-x, repeat;
 		background-size: 100% 30em, auto;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 13pt;
+		// font-family: 'Open Sans', sans-serif;
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 15pt;
 		color: #696969;
 		font-weight: 300;
 		line-height: 2.25em;
@@ -132,8 +133,9 @@
 	}
 
 	input, select, textarea {
-		font-family: 'Open Sans', sans-serif;
-		font-size: 13pt;
+		// font-family: 'Open Sans', sans-serif;
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 15pt;
 		color: #696969;
 		font-weight: 300;
 		line-height: 2.25em;
@@ -448,11 +450,11 @@
 		}
 
 		&:hover {
-			background: #10a0d5;
+			background: #3db0ab;
 		}
 
 		&:active {
-			background: #20b0e5;
+			background: #6dc2be;
 		}
 
 		&.alt {
@@ -704,7 +706,8 @@
 			background: #71cbca;
 			color: #fff;
 			border-radius: 6px;
-			font-family: 'Oleo Script', serif;
+			// font-family: 'Oleo Script', serif;
+			font-family: 'Cinzel', serif;
 			font-weight: 400;
 			padding: 0.25em 0.2em 0.25em 0.2em;
 			font-size: 3.25em;

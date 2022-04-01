@@ -37,12 +37,22 @@
 									<!-- Content -->
 										<article>
 
-											<h2>Left Sidebar</h2>
+											<h2>Cours :</h2>
 
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam lorem ipsum dolor sit amet nullam.</p>
+											<ul>
+											<?php
+											foreach($get_Course as $cours){
+												echo "<li>Horaire : ".$cours["horaires"]
+												// ."<br>Nombre de places : ".$cours["nbPlace"]
+												//."<br>Professeur (id) : ".$cours["idProfesseur"]
+												// ."<br>Professeur : ".$cours["nom"]
+												// //."<br>Instrument (id) : ".$cours["idInstrument"]
+												// ."<br>Professeur : ".$cours["instrument_nom"]
+												."</li>";
+											}
+											?>
+											</ul>
+											
 
 											<h3>More intriguing information</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus

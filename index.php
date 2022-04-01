@@ -17,6 +17,13 @@ switch($action)
 
  case 'course' :
 	// $course = getCourse();
+	require_once("modele/dbconnect.php");
+	$bdd = connectBDD();
+
+	$getGet = getInstru();
+	
+
+	$get_Course = getCourses();
 	include("views/v_course.php");
 	break;
 
