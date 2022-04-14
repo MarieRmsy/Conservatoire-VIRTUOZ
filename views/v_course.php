@@ -55,7 +55,7 @@
 												</thead>
 												<tbody>
 													<?php 
-													foreach ($get_Course as $cours) :?>
+													foreach ($getCours as $cours) :?>
 													
 													<tr class="item_row">
 															<td> <?php echo $cours[0]; ?></td>

@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/perso.css" />
-		<link rel="stylesheet" href="./modules/weavy.css"/>
+		<link rel="stylesheet" href="./modules/weavy/weavy.css"/>
 
 	</head>
 	<body class="is-preload homepage">
@@ -18,7 +18,7 @@
 							<div id="logo">
 								<h1><a href="index.html">Virtuoz</a></h1>
 								<span class="set-aca">Academy</span>
-								<?php include './modules/weavy.html';?>
+								<?php include './modules/weavy/weavy.html';?>
 								
 							</div>
 
@@ -53,7 +53,7 @@
 		</div>
 </div>
 
-<script src="./modules/weavy.js" type="text/javascript"></script>
+<script src="./modules/weavy/weavy.js" type="text/javascript"></script>
 
 
 	</body>

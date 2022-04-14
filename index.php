@@ -1,4 +1,7 @@
 <?php
+require_once("modele/dbconnect.php");
+$bdd = connectBDD();
+
 if(!isset($_REQUEST['action']))
 {
  $action = 'main';
@@ -16,10 +19,13 @@ switch($action)
  break;
 
  case 'course' :
-	require_once("modele/dbconnect.php");
-	$bdd = connectBDD();
+	require_once("modele/coursMod.php");
+	$coursModele = new Cours;
+	$getCours = $coursModele->get($bdd);
+	// var_dump($getCours);
+	// die;
+
 	$getGet = getInstru();
-	$get_Course = getCourses();
 	include("views/v_course.php");
 	break;
 
