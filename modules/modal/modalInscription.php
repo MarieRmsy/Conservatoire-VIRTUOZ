@@ -1,8 +1,4 @@
 
-<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
-<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
-
-		
 			<button id="slide-down-btn"> Inscrivez-vous</button>
 
 			<div id="slide-down-modal" class="modal tl">

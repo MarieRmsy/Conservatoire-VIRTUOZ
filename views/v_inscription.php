@@ -6,7 +6,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/perso.css" />
 		<link rel="stylesheet" href="./modules/modal/modal.css"/>
-
 	</head>
 	<body class="is-preload homepage">
 		<div id="page-wrapper">			<!-- Main -->

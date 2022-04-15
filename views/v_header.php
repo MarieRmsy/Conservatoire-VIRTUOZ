@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/perso.css" />
 		<link rel="stylesheet" href="./modules/weavy/weavy.css"/>
+		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
 
 	</head>
 	<body class="is-preload homepage">
@@ -44,6 +46,7 @@
 											</ul>
 										</li>
 										<li class='target' id='target3'><a href="index.php?action=inscription">Inscription</a></li>
+
 										<!-- <li><a href="right-sidebar.html">Right Sidebar</a></li> -->
 									</ul>
 								</nav>

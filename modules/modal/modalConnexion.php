@@ -1,13 +1,8 @@
-
-<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
-<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
-
-		
-			<button id="slide-down-btn-Connexion"> Connectez-vous</button>
+			<button id="slide-down-btn-Connexion">Connectez-vous</button>
 
 			<div id="slide-down-modal-Connexion" class="modal tl">
 				<div class="content">
-					<h2>Inscription</h2>
+					<h2>Connexion</h2>
 					<hr>
 					<p>Lorem.</p>
               <!-- DEBUT -->

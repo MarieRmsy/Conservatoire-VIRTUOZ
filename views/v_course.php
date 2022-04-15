@@ -8,26 +8,22 @@
 									<!-- Sidebar -->
 										<section>
 											
-											<h3>Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam.</p>
-											<footer>
-												<a href="#" class="button icon solid fa-info-circle">Find out more</a>
-											</footer>
+											<h3>Horaires du conservatoire</h3>
+											<ul>
+												<li>Lundi : 8:00-20:00</li>
+												<li>Mardi : 8:00-20:00</li>
+												<li>Mercredi : 12:00-21:00</li>
+												<li>Jeudi : 8:00-18:00</li>
+												<li>Vendredi : 8:00-22:00</li>
+												<li>Samedi : 7:00-12:00</li>
+												<li>Dimanche : Fermé</li>
+											</ul>
 										</section>
 
 										<section>
-											<h3>Subheading</h3>
-											<ul class="style2">
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quis eget mi dolore</a></li>
-												<li><a href="#">Quam turpis feugiat sit dolor</a></li>
-												<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quisturpis nisi</a></li>
-											</ul>
+											<h3>Fermetures exceptionnelles</h3>
+											<p>Le conservatoire est fermé pendant les représentations privées, les vacances scolaires ainsi que les périodes d'examens.</p>
+
 										</section>
 
 								</div>
