@@ -21,7 +21,6 @@
 
 											<h2>Right Sidebar</h2>
 
-											<?php include './modules/modal/modal.html';?>
 											
 										</article>
 
@@ -43,15 +42,13 @@
 										</section>
 
 										<section>
-											<h3>Subheading</h3>
-											<ul class="style2">
-												<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-												<li><a href="#">Ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quis eget mi dolore</a></li>
-												<li><a href="#">Quam turpis feugiat sit dolor</a></li>
-												<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
-												<li><a href="#">Semper mod quisturpis nisi</a></li>
-											</ul>
+											<h3>Inscription</h3>
+											<?php include './modules/modal/modalInscription.php';?>
+										</section>
+
+										<section>
+											<h3>Connexion</h3>
+											<?php include './modules/modal/modalConnexion.php';?>
 										</section>
 
 								</div>
@@ -61,6 +58,5 @@
 				</div>
 		</div>
 		
-	<script src="./modules/modal/modal.js" type="text/javascript"></script>
 	</body>
 </html>

@@ -32,8 +32,8 @@
 							</div>
 							<div class="col-5 col-12-medium">
 								<ul>
-									<li><a href="#" class="button large icon solid fa-arrow-circle-right">Cours</a></li>
-									<li><a href="#" class="button large alt icon solid fa-question-circle">Inscriptions</a></li>
+									<li><a href="index.php?action=course" class="button large icon solid fa-arrow-circle-right">Cours</a></li>
+									<li><a href="index.php?action=inscription" class="button large alt icon solid fa-question-circle">Inscriptions</a></li>
 								</ul>
 							</div>
 						</div>

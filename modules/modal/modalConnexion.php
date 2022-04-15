@@ -3,9 +3,9 @@
 <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
 
 		
-			<button id="slide-down-btn"> Modal ici </button>
+			<button id="slide-down-btn-Connexion"> Connectez-vous</button>
 
-			<div id="slide-down-modal" class="modal tl" style="overflow: scroll !important;">
+			<div id="slide-down-modal-Connexion" class="modal tl">
 				<div class="content">
 					<h2>Inscription</h2>
 					<hr>
@@ -109,7 +109,30 @@ echo $gender;
               <!-- FIN -->
 				</div>
 			
-				<span id="slide-down-close" class="close">&times;</span>
+				<span id="slide-down-close-Connexion" class="close">&times;</span>
 			</div>
 
-  <script  src="./modal.js"></script>
+
+
+<script>
+  $(document).ready(function(){
+
+// Slide down effect starts here
+$("#slide-down-btn-Connexion").click( function()
+    {
+     $("#slide-down-modal-Connexion").slideDown('slow/400/fast', function() {
+       $("#slide-down-modal-Connexion").css("display", "block");  	
+     });
+    }
+);
+
+$("#slide-down-close-Connexion").click( function()
+    {
+      $("#slide-down-modal-Connexion").slideUp('slow/400/fast', function() {
+       $("#slide-down-modal-Connexion").css("display", "none");  	
+     });
+    }
+);
+
+});
+</script>

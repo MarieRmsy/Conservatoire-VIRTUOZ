@@ -28,3 +28,10 @@ Credits:
 	Other:
 		jQuery (jquery.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
+
+
+
+SOURCES :
+
+images :
+https://c.tenor.com/1yoIAAN19I4AAAAC/teacher1.gif
