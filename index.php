@@ -1,5 +1,7 @@
 <?php
 require_once("modele/dbconnect.php");
+require_once("modele/userMod.php");
+
 $bdd = connectBDD();
 
 if(!isset($_REQUEST['action']))
@@ -31,6 +33,11 @@ switch($action)
 
  case 'inscription' :
 	include("views/v_inscription.php");
+	break;
+
+ case 'test' :
+	$user = new User;
+	var_dump($user->add($bdd,'yame','prenom','06969669','paris','test@gmail.com'));
 	break;
 	
 }

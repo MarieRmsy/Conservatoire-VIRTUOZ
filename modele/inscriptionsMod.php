@@ -7,10 +7,8 @@
 */
     class Inscriptions 
     {
-        public function get(object $bdd)
+        public function post(object $bdd)
         {
             
         }
     }
-
-?>
