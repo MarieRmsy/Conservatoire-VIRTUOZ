@@ -11,6 +11,8 @@ $pdf->AddFont('JosefinSans-Thin','','JosefinSans-Thin.php');
 // $pdf->SetStyle(string '1', string 'JosefinSans-SemiBold', string 'U', int '13', string 'red');
 $pdf->Image('../images/virtuoz.png',10, 10, 100, 15);
 $pdf->Image('../images/notes.png',50, 120, 100, 90);
+$pdf->Image('../images/basdepage.png',0, 280, 300, 20);
+
 
 $pdf->SetFont('JosefinSans-SemiBold','U',20);
 $pdf->Text(60,50,'Bilan de votre inscription');
