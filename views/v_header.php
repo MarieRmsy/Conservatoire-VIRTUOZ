@@ -45,10 +45,21 @@
 												</li>
 											</ul>
 										</li>
-										<li class='target' id='target3'><a href="index.php?action=inscription">Inscription</a></li>
+										<li class='target' id='target3'><a href="index.php?action=inscription">Espace Membre</a></li>
+										
 
 										<!-- <li><a href="right-sidebar.html">Right Sidebar</a></li> -->
 									</ul>
+									<?php		
+                                                if($userData['rank'] == "admin")
+                                                {
+                                                    echo "<li class='target' id='target3'><a href='index.php?action=inscription'>Liste de toutes les inscriptions</a></li>";
+                                                }
+                                                else if($userData['rank'] == "user")
+                                                {
+                                                    echo "<div style='background-color: red; color: white; font-weight: bold;'>God mod desactivated</div>";
+                                                }
+                                            ?>
 								</nav>
 							<!-- </div> -->
 

@@ -13,10 +13,20 @@ else {
  $action = $_REQUEST['action'];
 }
 
+$userModel = new User;
+
+if( isset($_SESSION['user_id']) )
+{
+	$userData = $userModel->getUserById($bdd, $_SESSION['user_id']);
+} else {
+	$userData['rank'] = 'none';
+}
+
 include("views/v_header.php") ;
 
 switch($action)
 {
+	
  case 'main':
  include("views/v_main.php");
  break;
@@ -40,7 +50,7 @@ case 'connexion' :
 	break;
 
 case 'me' :
-	$userModel = new User;
+	// $userModel = new User;
 
 	// Vérifier que la session existe
 	if( !isset($_SESSION['user_id']) )
@@ -49,7 +59,7 @@ case 'me' :
 		die;
 	}
 
-	$userData = $userModel->getUserById($bdd, $_SESSION['user_id']);
+	// $userData = $userModel->getUserById($bdd, $_SESSION['user_id']);
 
 	// Vérifier que la session existe
 	if( $userData === false )
