@@ -1,6 +1,7 @@
 <?php
 require_once("modele/dbconnect.php");
 require_once("modele/userMod.php");
+require_once("modele/coursMod.php");
 
 $bdd = connectBDD();
 
@@ -21,7 +22,6 @@ switch($action)
  break;
 
  case 'course' :
-	require_once("modele/coursMod.php");
 	$coursModele = new Cours;
 	$getCours = $coursModele->get($bdd);
 	// var_dump($getCours);
@@ -35,9 +35,38 @@ switch($action)
 	include("views/v_inscription.php");
 	break;
 
+case 'connexion' :
+	include("views/v_connexion.php");
+	break;
+
+case 'me' :
+	$userModel = new User;
+
+	// Vérifier que la session existe
+	if( !isset($_SESSION['user_id']) )
+	{
+		header('location: index.php?action=connexion');
+		die;
+	}
+
+	$userData = $userModel->getUserById($bdd, $_SESSION['user_id']);
+
+	// Vérifier que la session existe
+	if( $userData === false )
+	{
+		header('location: index.php?action=connexion');
+		die;
+	}
+
+	include("views/v_me.php");
+	break;
+
+case 'logout' :
+	session_destroy();
+	header('location: index.php?action=connexion');
+	break;
+
  case 'test' :
-	$user = new User;
-	var_dump($user->add($bdd,'yame','prenom','06969669','paris','test@gmail.com'));
 	break;
 	
 }

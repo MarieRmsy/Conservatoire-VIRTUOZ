@@ -49,7 +49,7 @@
 							<div class="col-12">
 								<div id="copyright">
 									<ul class="menu">
-										<li>&copy; V I R T U O Z. Tous droits réservés</li><li>Design: <a href="http://html5up.net">par Marie Ramssamy avec Html5 UP</a></li>
+										<li>&copy; V I R T U O Z. Tous droits réservés</li><li>Design: <a href="http://html5up.net">par xx avec Html5 UP</a></li>
 									</ul>
 								</div>
 							</div>

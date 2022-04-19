@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="modules/disk.scss" />
+		<script src="assets/js/jquery.min.js"></script>
 		
 	</head>
 	<body class="is-preload homepage">
@@ -137,7 +138,6 @@
 
 		<!-- Scripts -->
 
-			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>

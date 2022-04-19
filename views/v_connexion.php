@@ -18,27 +18,22 @@
 									<!-- Content -->
 										<article>
 
-											<h2>Inscription au cours</h2>
+											<h2>Se connecter</h2>
 
-											<div id="callbackAjax" style="display:none"></div>
-
-											<form id="registerForm">
-												<input id="formEmailRegister" name="formEmailRegister" type="email" placeholder="email@foo.com"><br/>
-												<input id="formPasswordRegister" name="formPasswordRegister" type="password" placeholder="Mot de passe"><br>
-												<input id="formFirstnameRegister" name="formFirstnameRegister" type="text" placeholder="Prénom"><br/>
-												<input id="formLastnameRegister" name="formLastnameRegister" type="text" placeholder="Nom"><br>
-												<input id="formPhoneRegister" name="formPhoneRegister" type="text" placeholder="Téléphone"><br>
-												<input id="formAdressRegister" name="formAdressRegister" type="text" placeholder="Adresse postale"><br>
-												<input type="hidden" name="do" value="register">
-												<button type="submit">S'enregistrer</button>
+                                            <div id="feedbackConnect" style="display:none;color:red;font-weight:bold;">L'identifiant et le mot de passe ne correspondent pas.</div>
+											<form id="loginForm">
+												<input id="formEmailConnect" name="formEmailConnect" type="email" placeholder="email@foo.com"><br/>
+												<input id="formPasswordConnect" name="formPasswordConnect" type="password" placeholder="Mot de passe"><br>
+												<input type="hidden" name="do" value="connect">
+												<button type="submit">Se connecter</button>
 
 											</form>
 											
 											<script type="text/javascript">
-												$('#registerForm').on('submit', function(e){
+												$('#loginForm').on('submit', function(e){
 													e.preventDefault();
 													console.log('formSumitted');
-													$('#callbackAjax').css('display','none');
+                                                    $('#feedbackConnect').css('display','none');
 													$.ajax({
 														url: 'ajax.php',
 														data: $(this).serialize(),
@@ -46,17 +41,14 @@
 													})
 													.done(function(reponse, data)
 													{
-														console.log(reponse);
-														if (reponse.state == "success")
-														{
-															$('#callbackAjax').text("Votre compte a bien été créé. Vous pouvez maintenant vous connecter.");
-															$('#callbackAjax').css('display',"block");
-														}
-														else if(reponse.state == "fail")
-														{
-															$('#callbackAjax').text("Un compte avec votre adresse email existe déjà");
-															$('#callbackAjax').css('display',"block");
-														}
+                                                        if(reponse.state == "success")
+                                                        {
+                                                            $(location).attr('href',"index.php?action=me");
+                                                        }
+                                                        else
+                                                        {
+                                                            $('#feedbackConnect').css('display','block');
+                                                        }
 													});
 												});	
 											</script>

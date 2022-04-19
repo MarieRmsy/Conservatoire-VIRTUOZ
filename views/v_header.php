@@ -18,7 +18,7 @@
 					<header id="header" class="container">
 						<!-- Logo -->
 							<div id="logo">
-								<h1><a href="index.html">Virtuoz</a></h1>
+								<h1><a href="index.php">Virtuoz</a></h1>
 								<span class="set-aca">Academy</span>
 								<?php include './modules/weavy/weavy.html';?>
 								
