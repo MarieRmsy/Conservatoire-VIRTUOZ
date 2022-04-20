@@ -11,7 +11,33 @@
 
 											<h2>Gestion des membres</h2>
 
-                                            test
+											<table>
+												<thead>
+													<tr>
+														<th>Nom Prénom</th>
+														<th>Email</th>
+														<th>Tel</th>
+														<th>Adresse</th>
+														<th>Profil</th>
+														<th>Rejoindre</th>
+													</tr>
+												</thead>
+												<tbody>
+													<?php 
+													foreach ($getUsers as $user) :?>
+													
+													<tr class="item_row">
+														<td> <?php echo $user[1]; echo "&nbsp;"; echo $user[2]; ?></td>
+														<td> <?php echo $user[5]; ?></td>
+														<td> <?php echo $user[3]; ?></td>
+														<td> <?php echo $user[4]; ?></td>
+														<td> <?php echo $user[7]; ?></td>
+														<td>Supprimer</td>
+													</tr>
+													<?php endforeach;?>
+												</tbody>
+												
+											</table>
 											
 										</article>
 
@@ -21,16 +47,12 @@
 								<div id="sidebar">
 
 									<!-- Sidebar -->
-										<section>
-											<h3>Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam.</p>
-											<footer>
-												<a href="#" id="slide-down-btn-User" class="button icon solid fa-info-circle">Find out more</a>
-											</footer>
-										</section>
+									<section>
+										<h3>Actions :</h3>
+										<footer>
+											<a href="#" id="slide-down-btn-User" class="button icon solid fa-mouse-pointer">(?)</a>
+										</footer>
+									</section>
 
 								</div>
 							</div>

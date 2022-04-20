@@ -11,7 +11,34 @@
 
 											<h2>Gestion des cours</h2>
 
-                                            test
+											<table>
+												<thead>
+													<tr>
+														<th>Numéro</th>
+														<th>Date</th>
+														
+														<th>Instrument</th>
+														<th>Places</th>
+														<th>Professeur</th>
+														<th>Rejoindre</th>
+													</tr>
+												</thead>
+												<tbody>
+													<?php 
+													foreach ($getCours as $cours) :?>
+													
+													<tr class="item_row">
+															<td> <?php echo $cours[0]; ?></td>
+															<td> <?php echo $cours[1]; ?></td>
+															<td> <?php echo $cours[9]; ?></td>
+															<td> <?php echo $cours[2]; ?></td>
+															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?></td>
+															<td>Supprimer</td>
+													</tr>
+													<?php endforeach;?>
+												</tbody>
+												
+											</table>
 											
 										</article>
 
@@ -22,13 +49,9 @@
 
 									<!-- Sidebar -->
 										<section>
-											<h3>Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam.</p>
+											<h3>Actions :</h3>
 											<footer>
-												<a href="#" id="slide-down-btn-Courses" class="button icon solid fa-info-circle">Find out more</a>
+												<a href="#" id="slide-down-btn-Courses" class="button icon solid fa-mouse-pointer">Ajouter un cours</a>
 											</footer>
 										</section>
 
@@ -37,14 +60,13 @@
 
 							<div id="slide-down-modal-Courses" class="modal tl">
 								<div class="content">
-									<h2>Cours</h2>
+									<h2>Ajouter un cours</h2>
 									<hr>
-									<h3 id="feedbackConnect" style="display:none;color:red;font-weight:bold;">L'identifiant et le mot de passe ne correspondent pas.</h3>
-													
+                                    <h3>Test</h3>
 								</div>
 											
 								<span id="slide-down-close-Courses" class="close">&times;</span>
-								</div>
+							</div>
 						</div>
 					</div>
 				</div>

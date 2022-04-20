@@ -40,4 +40,14 @@ function getInstru(){
 
 }
 
+function getAdherent(){
+    $req = "SELECT * FROM adherent";
+
+    $exe = connectBDD()->prepare($req);
+    $exe->execute();
+    $getAdherent = $exe->fetchAll();
+    return $getAdherent;
+
+}
+
 ?>

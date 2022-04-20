@@ -32,6 +32,7 @@ switch($action)
  include("views/v_main.php");
  break;
 
+// COURS
  case 'course' :
 	$coursModele = new Cours;
 	$getCours = $coursModele->get($bdd);
@@ -42,15 +43,18 @@ switch($action)
 	include("views/v_course.php");
 	break;
 
+// INSCRIPTION
  case 'inscription' :
 
 	include("views/v_inscription.php");
 	break;
 
+// CONNEXION
  case 'connexion' :
 	include("views/v_connexion.php");
 	break;
 
+// USER
  case 'user' :
 	// $userModel = new User;
 
@@ -73,11 +77,12 @@ switch($action)
 	include("views/v_user.php");
 	break;
 
+// USER COURS
  case 'userCourses' :
 	include("views/v_userCourses.php");
 	break;
 
-
+// ADMIN
  case 'admin' :
 	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
 	{
@@ -88,7 +93,7 @@ switch($action)
 	include("views/admin/v_admin.php");
 	break;
 
-
+// ADMIN COURS
  case 'adminCourses' :
 	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
 	{
@@ -96,9 +101,13 @@ switch($action)
 		die;
 	}
 
+	$coursModele = new Cours;
+	$getCours = $coursModele->get($bdd);
+
 	include("views/admin/v_adminCourses.php");
 	break;
-		
+	
+// ADMIN INSCRIPTIONS 
  case 'adminInscriptions' :
 	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
 	{
@@ -109,6 +118,7 @@ switch($action)
 	include("views/admin/v_adminInscriptions.php");
 	break;
 
+// ADMIN MEMBRES
  case 'adminUsers' :
 	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
 	{
@@ -116,9 +126,12 @@ switch($action)
 		die;
 	}
 
+	$getUsers = getAdherent();
+
 	include("views/admin/v_adminUsers.php");
 	break;
-		
+
+// DECONNEXION
  case 'logout' :
 	session_destroy();
 	header('location: index.php?action=connexion');

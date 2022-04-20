@@ -11,7 +11,34 @@
 
 											<h2>Gestion des inscriptions</h2>
 
-                                            test
+                                            <table>
+												<thead>
+													<tr>
+														<th>Numéro</th>
+														<th>Date</th>
+														
+														<th>Instrument</th>
+														<th>Places</th>
+														<th>Professeur</th>
+														<th>Rejoindre</th>
+													</tr>
+												</thead>
+												<tbody>
+													<?php 
+													foreach ($getUsers as $user) :?>
+													
+													<tr class="item_row">
+															<td> <?php echo $user[0]; ?></td>
+															<td> <?php echo $user[1]; ?></td>
+															<td> <?php echo $user[9]; ?></td>
+															<td> <?php echo $user[2]; ?></td>
+															<td> <?php echo $user[6]; echo "&nbsp;"; echo $user[7]; ?></td>
+															<td>Supprimer</td>
+													</tr>
+													<?php endforeach;?>
+												</tbody>
+												
+											</table>
 											
 										</article>
 
@@ -21,16 +48,12 @@
 								<div id="sidebar">
 
 									<!-- Sidebar -->
-										<section>
-											<h3>Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam.</p>
-											<footer>
-												<a href="#" id="slide-down-btn-Liste" class="button icon solid fa-info-circle">Find out more</a>
-											</footer>
-										</section>
+									<section>
+										<h3>Actions :</h3>
+										<footer>
+											<a href="#" id="slide-down-btn-Liste" class="button icon solid fa-mouse-pointer">(?)</a>
+										</footer>
+									</section>
 
 								</div>
 							</div>
