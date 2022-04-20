@@ -3,20 +3,25 @@
             <div id="main-wrapper">
 					<div class="container">
 						<div class="row gtr-200">
-							<div class="col-8 col-12-medium">
+							<div class="col-12 col-12-medium">
 								<div id="content">
 
 									<!-- Content -->
 										<article>
 
-											<h2>Gestion des cours</h2>
+											<h2>
+												Gestion des cours
+												<span>
+													<a href="#" id="slide-down-btn-Courses" style="font-size: 0.6em;font-weight:bold;" class="button icon solid fa-mouse-pointer">Ajouter un cours</a>
+												</span>
+												
+											</h2>
 
 											<table>
 												<thead>
 													<tr>
 														<th>Numéro</th>
 														<th>Date</th>
-														
 														<th>Instrument</th>
 														<th>Places</th>
 														<th>Professeur</th>
@@ -44,25 +49,20 @@
 
 								</div>
 							</div>
-							<div class="col-4 col-12-medium">
-								<div id="sidebar">
-
-									<!-- Sidebar -->
-										<section>
-											<h3>Actions :</h3>
-											<footer>
-												<a href="#" id="slide-down-btn-Courses" class="button icon solid fa-mouse-pointer">Ajouter un cours</a>
-											</footer>
-										</section>
-
-								</div>
-							</div>
 
 							<div id="slide-down-modal-Courses" class="modal tl">
 								<div class="content">
 									<h2>Ajouter un cours</h2>
 									<hr>
-                                    <h3>Test</h3>
+									</br>
+									<form id="registerForm">
+											<input id="formEmailRegister" name="formEmailRegister" type="text" placeholder="Lundi 17h"><br/>
+											<input id="formPasswordRegister" name="formPasswordRegister" type="text" placeholder="Nombre de places"><br>
+											<select><option value="Prof">Professeurs</option></select>
+											<select><option value="Prof">Instrument</option></select>
+											<input type="hidden" name="do" value="register">
+											<button type="submit">Ajouter</button>
+									</form>
 								</div>
 											
 								<span id="slide-down-close-Courses" class="close">&times;</span>

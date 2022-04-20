@@ -3,13 +3,19 @@
             <div id="main-wrapper">
 					<div class="container">
 						<div class="row gtr-200">
-							<div class="col-8 col-12-medium">
+							<div class="col-12 col-12-medium">
 								<div id="content">
 
 									<!-- Content -->
 										<article>
 
-											<h2>Gestion des membres</h2>
+											<h2>
+												Gestion des cours
+												<span>
+													<a href="#" id="slide-down-btn-User" style="font-size: 0.6em;font-weight:bold;" class="button icon solid fa-mouse-pointer">?</a>
+												</span>
+												
+											</h2>
 
 											<table>
 												<thead>
@@ -40,19 +46,6 @@
 											</table>
 											
 										</article>
-
-								</div>
-							</div>
-							<div class="col-4 col-12-medium">
-								<div id="sidebar">
-
-									<!-- Sidebar -->
-									<section>
-										<h3>Actions :</h3>
-										<footer>
-											<a href="#" id="slide-down-btn-User" class="button icon solid fa-mouse-pointer">(?)</a>
-										</footer>
-									</section>
 
 								</div>
 							</div>

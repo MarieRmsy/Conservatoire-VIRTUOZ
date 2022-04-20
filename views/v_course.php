@@ -8,7 +8,7 @@
 									<!-- Sidebar -->
 										<section>
 											
-											<h3>Horaires du conservatoire</h3>
+											<h3>Horaires d'ouverture</h3>
 											<ul>
 												<li>Lundi : 8:00-20:00</li>
 												<li>Mardi : 8:00-20:00</li>
@@ -59,7 +59,7 @@
 															<td> <?php echo $cours[9]; ?></td>
 															<td> <?php echo $cours[2]; ?></td>
 															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?></td>
-															<td>Inscription</td>
+															<td id="slide-down-btn-Inscript">Inscription</td>
 													</tr>
 													<?php endforeach;?>
 												</tbody>
@@ -87,8 +87,44 @@
 
 										</article>
 
+										<div id="slide-down-modal-Inscript" class="modal tl">
+												<div class="content">
+													<h2>Inscription</h2>
+													<hr>
+													<p>Confirmez-vous vôtre inscription au cours de ?</p>
+
+													<button id="InscriptionOK" class="button icon solid fa-check-circle">Oui</button>
+													<button id="InscriptionNO" class="button icon fa-times-circle">Non, annuler</button>
+
+												</div>
+												<span id="slide-down-close-Inscript" class="close">&times;</span>
+										</div>
+
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
+		<script>
+		$(document).ready(function(){
+
+		// Slide down effect starts here
+		$("#slide-down-btn-Inscript").click( function()
+			{
+			$("#slide-down-modal-Inscript").slideDown('slow/400/fast', function() {
+			$("#slide-down-modal-Inscript").css("display", "block");  	
+			});
+			}
+		);
+
+		$("#slide-down-close-Inscript").click( function()
+			{
+			$("#slide-down-modal-Inscript").slideUp('slow/400/fast', function() {
+			$("#slide-down-modal-Inscript").css("display", "none");  	
+			});
+			}
+		);
+
+		});
+		</script>

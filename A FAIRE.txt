@@ -6,6 +6,9 @@ Redirection automatique vers une page d'erreur si url fausse
 
 Trier la liste des cours par instrument ?
 
+Afficher la colonne "inscription" de cours seulement si connecté 
+
+
 ADMIN : 
 -Pouvoir supprimer une personne d'un cours dans la liste d'inscription
 -Supprimer et ajouter un cours depuis la paeg cours
