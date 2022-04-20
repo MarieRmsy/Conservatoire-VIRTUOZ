@@ -42,6 +42,7 @@ switch($action)
 	break;
 
  case 'inscription' :
+
 	include("views/v_inscription.php");
 	break;
 

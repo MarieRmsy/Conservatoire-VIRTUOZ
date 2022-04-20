@@ -18,17 +18,29 @@
 									<!-- Content -->
 										<article>
 
-											<h2>Se connecter</h2>
+											<h2>Connectez-vous</h2>
 
-                                            <div id="feedbackConnect" style="display:none;color:red;font-weight:bold;">L'identifiant et le mot de passe ne correspondent pas.</div>
+                                            
 											<form id="loginForm">
 												<input id="formEmailConnect" name="formEmailConnect" type="email" placeholder="email@foo.com"><br/>
 												<input id="formPasswordConnect" name="formPasswordConnect" type="password" placeholder="Mot de passe"><br>
 												<input type="hidden" name="do" value="connect">
-												<button type="submit">Se connecter</button>
+												<button type="submit" id="slide-down-btn-Connexion">Se connecter</button>
 
 											</form>
 											
+											
+											<div id="slide-down-modal-Connexion" class="modal tl">
+												<div class="content">
+													<h2>Connexion</h2>
+													<hr>
+													<h3 id="feedbackConnect" style="display:none;color:red;font-weight:bold;">L'identifiant et le mot de passe ne correspondent pas.</h3>
+													
+												</div>
+											
+												<span id="slide-down-close-Connexion" class="close">&times;</span>
+											</div>
+			
 											<script type="text/javascript">
 												$('#loginForm').on('submit', function(e){
 													e.preventDefault();
@@ -72,22 +84,34 @@
 											</footer>
 										</section>
 
-										<section>
-											<h3>Inscription</h3>
-											<?php include './modules/modal/modalInscription.php';?>
-										</section>
-
-										<section>
-											<h3>Connexion</h3>
-											<?php include './modules/modal/modalConnexion.php';?>
-										</section>
-
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 		</div>
-		
+		<script>
+		$(document).ready(function(){
+
+		// Slide down effect starts here
+		$("#slide-down-btn-Connexion").click( function()
+			{
+			$("#slide-down-modal-Connexion").slideDown('slow/400/fast', function() {
+			$("#slide-down-modal-Connexion").css("display", "block");  	
+			});
+			}
+		);
+
+		$("#slide-down-close-Connexion").click( function()
+			{
+			$("#slide-down-modal-Connexion").slideUp('slow/400/fast', function() {
+			$("#slide-down-modal-Connexion").css("display", "none");  	
+			});
+			}
+		);
+
+		});
+		</script>
+
 	</body>
 </html>

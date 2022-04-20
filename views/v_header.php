@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/perso.css" />
-		<link rel="stylesheet" href="./modules/weavy/weavy.css"/>
+		<link rel="stylesheet" href="assets/weavy/weavy.css"/>
 		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
 		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
 
@@ -20,7 +20,7 @@
 							<div id="logo">
 								<h1><a href="index.php">Virtuoz</a></h1>
 								<span class="set-aca">Academy</span>
-								<?php include './modules/weavy/weavy.html';?>
+								<?php include 'assets/weavy/weavy.html';?>
 								
 							</div>
 
@@ -34,32 +34,27 @@
 											<ul>
 												<li><a href="#">Piano</a></li>
 												<li><a href="#">Guitare</a></li>
-												<li>
-													<a href="#">Trompette</a>
-													<ul>
-														<li><a href="#">Lorem ipsum dolor</a></li>
-														<li><a href="#">Phasellus consequat</a></li>
-														<li><a href="#">Magna phasellus</a></li>
-														<li><a href="#">Etiam dolore nisl</a></li>
-													</ul>
-												</li>
+												<li><a href="#">Trompette</a></li>
 											</ul>
 										</li>
-										<li class='target' id='target3'><a href="index.php?action=inscription">Espace Membre</a></li>
 										
-
-										<!-- <li><a href="right-sidebar.html">Right Sidebar</a></li> -->
-									</ul>
-									<?php		
+										<?php	
                                                 if($userData['rank'] == "admin")
                                                 {
                                                     echo "<li class='target' id='target3'><a href='index.php?action=inscription'>Liste de toutes les inscriptions</a></li>";
                                                 }
                                                 else if($userData['rank'] == "user")
                                                 {
-                                                    echo "<div style='background-color: red; color: white; font-weight: bold;'>God mod desactivated</div>";
-                                                }
+                                                    echo "<li class='target' id='target3'><a href='index.php?action=inscription'>Mes cours</a></li>";
+
+                                                } else if($userData['rank'] == 'none')
+												{
+													echo "<li class='target' id='target3'><a href='index.php?action=connexion'>Connexion</a></li>
+													<li class='target' id='target3'><a href='index.php?action=inscription'>Inscription</a></li>";
+												}
                                             ?>
+									</ul>
+									
 								</nav>
 							<!-- </div> -->
 
@@ -67,7 +62,7 @@
 		</div>
 </div>
 
-<script src="./modules/weavy/weavy.js" type="text/javascript"></script>
+<script src="assets/weavy/weavy.js" type="text/javascript"></script>
 
 
 	</body>

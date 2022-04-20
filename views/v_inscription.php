@@ -18,9 +18,7 @@
 									<!-- Content -->
 										<article>
 
-											<h2>Inscription au cours</h2>
-
-											<div id="callbackAjax" style="display:none"></div>
+											<h2>Créez votre compte</h2>
 
 											<form id="registerForm">
 												<input id="formEmailRegister" name="formEmailRegister" type="email" placeholder="email@foo.com"><br/>
@@ -30,11 +28,23 @@
 												<input id="formPhoneRegister" name="formPhoneRegister" type="text" placeholder="Téléphone"><br>
 												<input id="formAdressRegister" name="formAdressRegister" type="text" placeholder="Adresse postale"><br>
 												<input type="hidden" name="do" value="register">
-												<button type="submit">S'enregistrer</button>
-
+												<button type="submit" id="slide-down-btn">S'enregistrer</button>
 											</form>
 											
+											<div id="slide-down-modal" class="modal tl">
+												<div class="content">
+													<h2>Inscription</h2>
+													<hr>
+													<h3 id="callbackAjax"></h3>
+
+													<a id="redirect" href="index.php?action=connexion" class="button icon solid fa-arrow-circle-right" style="display:none">Me connecter</a>
+
+												</div>
+												<span id="slide-down-close" class="close">&times;</span>
+											</div>
+
 											<script type="text/javascript">
+
 												$('#registerForm').on('submit', function(e){
 													e.preventDefault();
 													console.log('formSumitted');
@@ -46,11 +56,13 @@
 													})
 													.done(function(reponse, data)
 													{
+
 														console.log(reponse);
 														if (reponse.state == "success")
 														{
 															$('#callbackAjax').text("Votre compte a bien été créé. Vous pouvez maintenant vous connecter.");
 															$('#callbackAjax').css('display',"block");
+															$('#redirect').css('display',"block");
 														}
 														else if(reponse.state == "fail")
 														{
@@ -69,25 +81,12 @@
 								<div id="sidebar">
 
 									<!-- Sidebar -->
+
 										<section>
-											<h3>Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam.</p>
+											<h3>Rejoignez le 1er conservatoire d'Europe, <span id="nom"></span> !</h3>
 											<footer>
 												<a href="#" class="button icon solid fa-info-circle">Find out more</a>
 											</footer>
-										</section>
-
-										<section>
-											<h3>Inscription</h3>
-											<?php include './modules/modal/modalInscription.php';?>
-										</section>
-
-										<section>
-											<h3>Connexion</h3>
-											<?php include './modules/modal/modalConnexion.php';?>
 										</section>
 
 								</div>
@@ -96,6 +95,28 @@
 					</div>
 				</div>
 		</div>
-		
+		<script src="assets/js/autocomplete.js" type="text/javascript"></script>
+		<script>
+			// Script Slide down effect
+			$(document).ready(function(){
+
+			$("#slide-down-btn").click( function()
+				{
+					$("#slide-down-modal").slideDown('slow/400/fast', function() {
+					$("#slide-down-modal").css("display", "block");  	
+					});
+				}
+			);
+
+			$("#slide-down-close").click( function()
+				{
+					$("#slide-down-modal").slideUp('slow/400/fast', function() {
+					$("#slide-down-modal").css("display", "none");  	
+					});
+				}
+			);
+				
+			});
+		</script>
 	</body>
 </html>
