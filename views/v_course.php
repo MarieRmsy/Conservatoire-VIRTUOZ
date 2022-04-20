@@ -35,7 +35,6 @@
 										<article>
 
 											<h2>Cours :</h2>
-
 											
 											<table>
 												<thead>
@@ -58,14 +57,103 @@
 															<td> <?php echo $cours[1]; ?></td>
 															<td> <?php echo $cours[9]; ?></td>
 															<td> <?php echo $cours[2]; ?></td>
-															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?></td>
-															<td id="slide-down-btn-Inscript">Inscription</td>
+															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?>
+															<?php
+																if( isset($_SESSION['user_id']) )
+																{
+																	?>
+																		<td id="slide-down-btn-Inscript<?= $cours[0]; ?>"><button style="font-size: 70%;">S'inscrire</button></td>
+																	<?php
+																}
+																else
+																{
+																	echo "<td><button style='font-size: 70%; background-color: grey; cursor: not-allowed;' disabled>S'inscrire</button></td>";
+																}
+															?>
+
+															<div id="slide-down-modal-Inscript<?= $cours[0]; ?>" class="modal tl">
+																	<div class="content">
+																		<h3>Confirmez-vous vôtre inscription au cours de ?</h3>
+																		<hr>
+																			<div class="feedbackAddCours" style="display:none; font-weight:bold;"></div>
+
+																		<?= $cours[0]; ?>
+																		</br>
+
+																		<button class="button icon solid fa-check-circle subscribeCours" attr-coursid="<?= $cours[0]; ?>" >Oui</button>
+																		<button class="button icon fa-times-circle slide-down-close-Inscript<?= $cours[0]; ?>">Non, annuler</button>
+
+																	</div>
+																	<span class="close slide-down-close-Inscript<?= $cours[0]; ?>">&times;</span>
+															</div>
+
+															<script>
+															$(document).ready(function(){
+
+															// Slide down effect starts here
+															$("#slide-down-btn-Inscript<?= $cours[0]; ?>").click( function()
+																{
+																$('.feedbackAddCours').css('display','none');
+																$("#slide-down-modal-Inscript<?= $cours[0]; ?>").slideDown('slow/400/fast', function() {
+																$("#slide-down-modal-Inscript<?= $cours[0]; ?>").css("display", "block");  	
+																});
+																}
+															);
+
+															$(".slide-down-close-Inscript<?= $cours[0]; ?>").click( function()
+																{
+																$('.feedbackAddCours').css('display','none');
+																$("#slide-down-modal-Inscript<?= $cours[0]; ?>").slideUp('slow/400/fast', function() {
+																$("#slide-down-modal-Inscript<?= $cours[0]; ?>").css("display", "none");  	
+																});
+																}
+															);
+
+															});
+															</script>
+															</td>
+															
 													</tr>
 													<?php endforeach;?>
+
+													<script type="text/javascript">
+																$('.subscribeCours').on('click',function(e){
+																	e.preventDefault();
+																	idCours = $(this).attr('attr-coursid');
+																	idUser = <?= $userData['id']; ?>;
+																	console.log('test1');
+																	$('.feedbackAddCours').css('display','none');
+																	$.ajax({
+																		url : "ajax.php",
+																		data : 'do=addRegistration&idUser='+idUser+'&idCours='+idCours,
+																		method: 'POST'
+																	})
+																	.done(function(reponse,data){
+																	console.log('test2');
+
+																		if(reponse.state == "success")
+																		{
+																	console.log('test3');
+
+																			$('.feedbackAddCours').css('display','block');
+																			$('.feedbackAddCours').text('Vous avez bien été inscrit au cours');
+																		}
+																		if(reponse.state == "fail")
+																		{
+																	console.log('test4');
+
+																			$('.feedbackAddCours').css('display','block');
+																			$('.feedbackAddCours').text('Inscription impossible à ce cours');
+																		}
+																	});
+
+																})
+
+
+															</script>
 												</tbody>
 												
 											</table>
-
 											
 
 											<h3>More intriguing information</h3>
@@ -87,18 +175,6 @@
 
 										</article>
 
-										<div id="slide-down-modal-Inscript" class="modal tl">
-												<div class="content">
-													<h2>Inscription</h2>
-													<hr>
-													<p>Confirmez-vous vôtre inscription au cours de ?</p>
-
-													<button id="InscriptionOK" class="button icon solid fa-check-circle">Oui</button>
-													<button id="InscriptionNO" class="button icon fa-times-circle">Non, annuler</button>
-
-												</div>
-												<span id="slide-down-close-Inscript" class="close">&times;</span>
-										</div>
 
 								</div>
 							</div>
@@ -106,25 +182,3 @@
 					</div>
 				</div>
 
-		<script>
-		$(document).ready(function(){
-
-		// Slide down effect starts here
-		$("#slide-down-btn-Inscript").click( function()
-			{
-			$("#slide-down-modal-Inscript").slideDown('slow/400/fast', function() {
-			$("#slide-down-modal-Inscript").css("display", "block");  	
-			});
-			}
-		);
-
-		$("#slide-down-close-Inscript").click( function()
-			{
-			$("#slide-down-modal-Inscript").slideUp('slow/400/fast', function() {
-			$("#slide-down-modal-Inscript").css("display", "none");  	
-			});
-			}
-		);
-
-		});
-		</script>

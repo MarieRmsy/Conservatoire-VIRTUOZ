@@ -12,14 +12,14 @@
 											<h2>Créez votre compte</h2>
 
 											<form id="registerForm">
-												<input id="formEmailRegister" name="formEmailRegister" type="email" placeholder="email@foo.com"><br/>
-												<input id="formPasswordRegister" name="formPasswordRegister" type="password" placeholder="Mot de passe"><br>
-												<input id="formFirstnameRegister" name="formFirstnameRegister" type="text" placeholder="Prénom"><br/>
-												<input id="formLastnameRegister" name="formLastnameRegister" type="text" placeholder="Nom"><br>
-												<input id="formPhoneRegister" name="formPhoneRegister" type="text" placeholder="Téléphone"><br>
-												<input id="formAdressRegister" name="formAdressRegister" type="text" placeholder="Adresse postale"><br>
+												<input id="formEmailRegister" name="formEmailRegister" type="email" placeholder="email@foo.com" required><br/>
+												<input id="formPasswordRegister" name="formPasswordRegister" type="password" placeholder="Mot de passe" required><br>
+												<input id="formFirstnameRegister" name="formFirstnameRegister" type="text" placeholder="Prénom" required><br/>
+												<input id="formLastnameRegister" name="formLastnameRegister" type="text" placeholder="Nom" required><br>
+												<input id="formPhoneRegister" name="formPhoneRegister" type="text" placeholder="Téléphone" required><br>
+												<input id="formAdressRegister" name="formAdressRegister" type="text" placeholder="Adresse postale" required><br>
 												<input type="hidden" name="do" value="register">
-												<button type="submit" id="slide-down-btn">S'enregistrer</button>
+												<button id="registerForm" type="submit">S'enregistrer</button>
 											</form>
 											
 											<div id="slide-down-modal" class="modal tl">
@@ -89,23 +89,23 @@
 		<script src="assets/js/autocomplete.js" type="text/javascript"></script>
 		<script>
 			// Script Slide down effect
-			$(document).ready(function(){
+			// $(document).ready(function(){
 
-			$("#slide-down-btn").click( function()
-				{
-					$("#slide-down-modal").slideDown('slow/400/fast', function() {
-					$("#slide-down-modal").css("display", "block");  	
-					});
-				}
-			);
+			// $("#registerForm").click( function()
+			// 	{
+			// 		$("#slide-down-modal").slideDown('slow/400/fast', function() {
+			// 		$("#slide-down-modal").css("display", "block");  	
+			// 		});
+			// 	}
+			// );
 
-			$("#slide-down-close").click( function()
-				{
-					$("#slide-down-modal").slideUp('slow/400/fast', function() {
-					$("#slide-down-modal").css("display", "none");  	
-					});
-				}
-			);
+			// $("#slide-down-close").click( function()
+			// 	{
+			// 		$("#slide-down-modal").slideUp('slow/400/fast', function() {
+			// 		$("#slide-down-modal").css("display", "none");  	
+			// 		});
+			// 	}
+			// );
 				
-			});
+			// });
 		</script>

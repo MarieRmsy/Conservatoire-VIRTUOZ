@@ -2,6 +2,9 @@
 require_once("modele/dbconnect.php");
 require_once("modele/userMod.php");
 require_once("modele/coursMod.php");
+require_once("modele/instruMod.php");
+require_once("modele/profMod.php");
+require_once("modele/inscriptionsMod.php");
 
 $bdd = connectBDD();
 
@@ -65,7 +68,8 @@ switch($action)
 		die;
 	}
 
-	// $userData = $userModel->getUserById($bdd, $_SESSION['user_id']);
+	$inscriptionsModel = new Inscriptions;
+	$getInscriptions = $inscriptionsModel->get($bdd, $userData['id']);
 
 	// Vérifier que la session existe
 	if( $userData === false )
@@ -79,6 +83,11 @@ switch($action)
 
 // USER COURS
  case 'userCourses' :
+	if( !isset($_SESSION['user_id']) )
+	{
+		header('location: index.php?action=connexion');
+		die;
+	}
 	include("views/v_userCourses.php");
 	break;
 
@@ -104,6 +113,12 @@ switch($action)
 	$coursModele = new Cours;
 	$getCours = $coursModele->get($bdd);
 
+	$instruMod = new Instruments;
+	$getInstru = $instruMod->get($bdd);
+
+	$profMod = new Professeur;
+	$getProf = $profMod->get($bdd);
+
 	include("views/admin/v_adminCourses.php");
 	break;
 	
@@ -114,6 +129,9 @@ switch($action)
 		header('location: index.php?action=connexion');
 		die;
 	}
+
+	$inscriptionsModel = new Inscriptions;
+	$getInscriptions = $inscriptionsModel->get($bdd);
 
 	include("views/admin/v_adminInscriptions.php");
 	break;
@@ -137,7 +155,9 @@ switch($action)
 	header('location: index.php?action=connexion');
 	break;
 
-
+	default :
+	header('location: index.php');
+	break;
 }
 
 include("views/v_footer.php") ;

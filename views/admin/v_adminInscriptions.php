@@ -31,14 +31,14 @@
 												</thead>
 												<tbody>
 													<?php 
-													foreach ($getUsers as $user) :?>
+													foreach ($getInscriptions as $item) :?>
 													
 													<tr class="item_row">
-															<td> <?php echo $user[0]; ?></td>
-															<td> <?php echo $user[1]; ?></td>
-															<td> <?php echo $user[9]; ?></td>
-															<td> <?php echo $user[2]; ?></td>
-															<td> <?php echo $user[6]; echo "&nbsp;"; echo $user[7]; ?></td>
+															<td> <?php echo $item[0]; ?></td>
+															<td> <?php echo $item[1]; ?></td>
+															<td> <?php echo $item[9]; ?></td>
+															<td> <?php echo $item[2]; ?></td>
+															<td> <?php echo $item[6]; echo "&nbsp;"; echo $item[7]; ?></td>
 															<td>Supprimer</td>
 													</tr>
 													<?php endforeach;?>

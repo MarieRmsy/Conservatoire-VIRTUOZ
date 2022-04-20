@@ -13,6 +13,39 @@
             $getCours = $exe->fetchAll();
             return $getCours;
         }
+
+        public function delete(object $bdd, int $id_cours)
+        {
+            $sqlDeleteRow = 'DELETE FROM cours WHERE id=:id';
+            $reqDeleteRow = $bdd->prepare($sqlDeleteRow);
+            $reqDeleteRow->bindParam('id', $id_cours);
+            if($reqDeleteRow->execute())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public function add(object $bdd, string $horaires, int $nbplace, int $idprof, int $idinstru)
+        {
+            $sqlAddRow = 'INSERT INTO cours(horaires,nbPlace,idProf,idInstru) VALUES(:horaires,:nbPlace,:idProf,:idInstru)';
+            $reqAddRow = $bdd->prepare($sqlAddRow);
+            $reqAddRow->bindParam('horaires', $horaires);
+            $reqAddRow->bindParam('nbPlace', $nbplace);
+            $reqAddRow->bindParam('idProf', $idprof);
+            $reqAddRow->bindParam('idInstru', $idinstru);
+            if($reqAddRow->execute())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 
 ?>

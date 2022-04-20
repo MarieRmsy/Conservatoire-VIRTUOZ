@@ -9,7 +9,7 @@
 									<!-- Content -->
 										<article>
 
-											<h2>Bonjour <?= $userData['prenom']; ?> <?= $userData['nom']; ?>
+											<h2>Bonjour <?= htmlentities($userData['prenom']); ?> <?= htmlentities($userData['nom']); ?>
                                             
 											
 											<?php
@@ -24,6 +24,13 @@
                                             ?>
 											</h2>
 
+											<?php 
+											foreach($getInscriptions as $item)
+											{
+												var_dump($item);
+											}
+											?>
+
 										</article>
 
 								</div>
@@ -36,12 +43,12 @@
 											
 										<a href="index.php?action=logout" class="button deconnect icon solid fa-sign-out-alt">Se déconnecter</a>
 										</section>
-
+<!-- 
 										<h3>Subheading</h3>
 											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
 											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
 											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam.</p>
+											consequat etiam.</p> -->
 
 								</div>
 							</div>

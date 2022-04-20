@@ -1,17 +1,17 @@
-Paramétrer pour que le password ne soit pas vide lors de l'inscription
+Paramétrer pour que le password ne soit pas vide lors de l'inscription [OK]
 
-Parametrer les modal lorsque les infos correspondent pas (connexion avec autre que email)
+Parametrer les modal lorsque les infos correspondent pas (connexion avec autre que email) [PAUSE]
 
-Redirection automatique vers une page d'erreur si url fausse
+Redirection automatique vers une page d'erreur si url fausse [FIXED]
 
-Trier la liste des cours par instrument ?
+Trier la liste des cours par instrument ? [PAUSE]
 
-Afficher la colonne "inscription" de cours seulement si connecté 
+Afficher la colonne "inscription" de cours seulement si connecté [FIXED]
 
 
 ADMIN : 
 -Pouvoir supprimer une personne d'un cours dans la liste d'inscription
--Supprimer et ajouter un cours depuis la paeg cours
+-Supprimer et ajouter un cours depuis la paeg cours [OK]
 -Gesion membre : trier les admins en bas
 
 USER :

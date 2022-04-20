@@ -8,6 +8,7 @@ function connectBDD(){
         $username = "root";
         $password = "";
         $dbh = new PDO('mysql:host=localhost;dbname=conservatoire', $username,$password);
+        $dbh->exec('SET NAMES utf8');
         return $dbh;
     }
     catch(PDOException $err)
