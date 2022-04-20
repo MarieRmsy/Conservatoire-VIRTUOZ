@@ -24,12 +24,12 @@
         {
             if( $userid == null )
             {
-                $reqGetInscriptions = 'SELECT * FROM inscription INNER JOIN adherent ON adherent.id = inscription.idAdh INNER JOIN cours ON cours.id = inscription.idCours';
+                $reqGetInscriptions = 'SELECT * FROM inscription INNER JOIN adherent ON adherent.id = inscription.idAdh INNER JOIN cours ON cours.id = inscription.idCours INNER JOIN instrument ON instrument.instruId = cours.idInstru INNER JOIN professeur ON professeur.profId =  cours.idProf';
                 $sqlGetInscriptions = $bdd->prepare($reqGetInscriptions);
             }
             else
             {
-                $reqGetInscriptions = 'SELECT * FROM inscription INNER JOIN adherent ON adherent.id = inscription.idAdh INNER JOIN cours ON cours.id = inscription.idCours WHERE idAdh=:userid ';
+                $reqGetInscriptions = 'SELECT * FROM inscription INNER JOIN adherent ON adherent.id = inscription.idAdh INNER JOIN cours ON cours.id = inscription.idCours INNER JOIN instrument ON instrument.instruId = cours.idInstru WHERE idAdh=:userid ';
                 $sqlGetInscriptions = $bdd->prepare($reqGetInscriptions);
                 $sqlGetInscriptions->bindParam('userid',$userid);
             }

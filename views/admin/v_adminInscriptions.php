@@ -20,11 +20,9 @@
                                             <table>
 												<thead>
 													<tr>
-														<th>Numéro</th>
-														<th>Date</th>
-														
+														<th>Adhérent</th>
+														<th>Cours</th>
 														<th>Instrument</th>
-														<th>Places</th>
 														<th>Professeur</th>
 														<th>Rejoindre</th>
 													</tr>
@@ -34,11 +32,11 @@
 													foreach ($getInscriptions as $item) :?>
 													
 													<tr class="item_row">
-															<td> <?php echo $item[0]; ?></td>
-															<td> <?php echo $item[1]; ?></td>
-															<td> <?php echo $item[9]; ?></td>
-															<td> <?php echo $item[2]; ?></td>
-															<td> <?php echo $item[6]; echo "&nbsp;"; echo $item[7]; ?></td>
+															<td> <?php echo $item['nom']; echo "&nbsp;"; echo $item['prenom']; ?></td>
+															<td> <?php echo $item['horaires']; ?></td>
+															<td> <?php echo $item['instruNom']; ?></td>
+															<td> <?php echo $item['profNom']; echo "&nbsp;"; echo $item['profPrenom']; ?></td>
+															<td> <?php echo $item[8]; ?></td>
 															<td>Supprimer</td>
 													</tr>
 													<?php endforeach;?>
@@ -47,6 +45,13 @@
 											</table>
 											
 										</article>
+
+										<?php
+											foreach($getInscriptions as $item)
+											{
+												var_dump($item);
+											}
+										?>
 
 								</div>
 							</div>
