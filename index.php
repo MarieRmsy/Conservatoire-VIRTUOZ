@@ -24,6 +24,7 @@ if( isset($_SESSION['user_id']) )
 
 include("views/v_header.php") ;
 
+
 switch($action)
 {
 	
@@ -46,11 +47,11 @@ switch($action)
 	include("views/v_inscription.php");
 	break;
 
-case 'connexion' :
+ case 'connexion' :
 	include("views/v_connexion.php");
 	break;
 
-case 'me' :
+ case 'user' :
 	// $userModel = new User;
 
 	// Vérifier que la session existe
@@ -69,17 +70,61 @@ case 'me' :
 		die;
 	}
 
-	include("views/v_me.php");
+	include("views/v_user.php");
 	break;
 
-case 'logout' :
+ case 'userCourses' :
+	include("views/v_userCourses.php");
+	break;
+
+
+ case 'admin' :
+	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
+	{
+		header('location: index.php?action=connexion');
+		die;
+	}
+
+	include("views/admin/v_admin.php");
+	break;
+
+
+ case 'adminCourses' :
+	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
+	{
+		header('location: index.php?action=connexion');
+		die;
+	}
+
+	include("views/admin/v_adminCourses.php");
+	break;
+		
+ case 'adminInscriptions' :
+	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
+	{
+		header('location: index.php?action=connexion');
+		die;
+	}
+
+	include("views/admin/v_adminInscriptions.php");
+	break;
+
+ case 'adminUsers' :
+	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
+	{
+		header('location: index.php?action=connexion');
+		die;
+	}
+
+	include("views/admin/v_adminUsers.php");
+	break;
+		
+ case 'logout' :
 	session_destroy();
 	header('location: index.php?action=connexion');
 	break;
 
- case 'test' :
-	break;
-	
+
 }
 
 include("views/v_footer.php") ;

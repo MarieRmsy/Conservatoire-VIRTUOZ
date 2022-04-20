@@ -1,13 +1,4 @@
-<html>
-	<head>
-		<title>Virtuoz</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/perso.css" />
-		<link rel="stylesheet" href="./modules/modal/modal.css"/>
-	</head>
-	<body class="is-preload homepage">
+
 		<div id="page-wrapper">			<!-- Main -->
             <div id="main-wrapper">
 					<div class="container">
@@ -55,7 +46,7 @@
 													{
                                                         if(reponse.state == "success")
                                                         {
-                                                            $(location).attr('href',"index.php?action=me");
+                                                            $(location).attr('href',"index.php?action=user");
                                                         }
                                                         else
                                                         {
@@ -112,6 +103,3 @@
 
 		});
 		</script>
-
-	</body>
-</html>

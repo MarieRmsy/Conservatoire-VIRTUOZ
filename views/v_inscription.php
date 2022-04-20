@@ -1,14 +1,5 @@
-<html>
-	<head>
-		<title>Virtuoz</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/perso.css" />
-		<link rel="stylesheet" href="./modules/modal/modal.css"/>
-	</head>
-	<body class="is-preload homepage">
-		<div id="page-wrapper">			<!-- Main -->
+
+		<div id="page-wrapper">
             <div id="main-wrapper">
 					<div class="container">
 						<div class="row gtr-200">
@@ -66,7 +57,7 @@
 														}
 														else if(reponse.state == "fail")
 														{
-															$('#callbackAjax').text("Un compte avec votre adresse email existe déjà");
+															$('#callbackAjax').text("Un compte avec votre adresse email existe déjà.");
 															$('#callbackAjax').css('display',"block");
 														}
 													});
@@ -118,5 +109,3 @@
 				
 			});
 		</script>
-	</body>
-</html>

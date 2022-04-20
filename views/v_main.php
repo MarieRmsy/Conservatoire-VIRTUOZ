@@ -28,10 +28,10 @@
 								<h2>Bienvenue !</h2>
 								<p style="font-size:30px;">Développez votre passion </br>pour la musique</p>
 							</div>
-							<div class="col-3 col-12-medium">
+							<div class="col-4 col-12-medium">
 								<img class="set-img" src="images/teacher.gif" alt="" />
 							</div>
-							<div class="col-5 col-12-medium">
+							<div class="col-4 col-12-medium">
 								<ul>
 									<li><a href="index.php?action=course" class="button large icon solid fa-arrow-circle-right">Cours</a></li>
 									<li><a href="index.php?action=inscription" class="button large alt icon solid fa-question-circle">Inscriptions</a></li>
@@ -49,7 +49,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/chibis/pink1.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>Put something here</h2>

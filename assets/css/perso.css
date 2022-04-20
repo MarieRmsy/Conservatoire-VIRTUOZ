@@ -1,5 +1,7 @@
 .set-img {
     max-height: 300px;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
     /* margin-top: -50px; */
 }
 
@@ -75,3 +77,26 @@
     -ms-overflow-style: none; 
     scrollbar-width: none; 
     }
+
+/* Déconnexion */
+.deconnect {
+  background: #be3f3f;
+}
+
+.deconnect:hover {
+  background: #942b2b;
+}
+
+/* Users */
+
+.memberUser {
+  font-size: 0.6em;
+  color: #71c771;
+  font-weight: bold;
+}
+
+.adminUser {
+  font-size: 0.6em;
+  color: #be3f3f;
+  font-weight: bold;
+}

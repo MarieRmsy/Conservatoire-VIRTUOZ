@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/perso.css" />
 		<link rel="stylesheet" href="assets/weavy/weavy.css"/>
+		<link rel="stylesheet" href="./modules/modal/modal.css"/>
 		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
 		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
 
@@ -39,19 +40,44 @@
 										</li>
 										
 										<?php	
-                                                if($userData['rank'] == "admin")
-                                                {
-                                                    echo "<li class='target' id='target3'><a href='index.php?action=inscription'>Liste de toutes les inscriptions</a></li>";
-                                                }
-                                                else if($userData['rank'] == "user")
-                                                {
-                                                    echo "<li class='target' id='target3'><a href='index.php?action=inscription'>Mes cours</a></li>";
-
-                                                } else if($userData['rank'] == 'none')
+                                                
+												if($userData['rank'] == 'none') // IF NO CONNECTED
 												{
-													echo "<li class='target' id='target3'><a href='index.php?action=connexion'>Connexion</a></li>
-													<li class='target' id='target3'><a href='index.php?action=inscription'>Inscription</a></li>";
+													echo "<li><a href='index.php?action=connexion'>Connexion</a></li>
+													<li><a href='index.php?action=inscription'>Inscription</a></li>";
 												}
+												else // IF CONNECTED
+                                                {
+													
+													if($userData['rank'] == "admin") // IF ADMIN
+													{
+														echo "
+														<li class='target' id='target3'>
+														<a href='index.php?action=admin'>Administration</a>
+															<ul>
+																<li><a href='index.php?action=adminCourses'>Gestion des cours</a></li>
+																<li><a href='index.php?action=adminInscriptions'>Gestion des inscriptions</a></li>
+																<li><a href='index.php?action=adminUsers'>Gestion des membres</a></li>
+																
+															</ul>
+														</li>
+														";
+													}
+													else if($userData['rank'] == "user") // IF USER
+													{
+														echo "<li><a href='index.php?action=userCourses'>Mes cours</a></li>";
+
+													}
+													// FOR ALL CONNECTED
+                                                    echo "
+														<li class='target' id='target4'>
+														<a href='index.php?action=user'>Mon compte</a>
+															<ul>
+																<li><a href='index.php?action=logout' style='color:#be3f3f'>Déconnexion</a></li>
+															</ul>
+															</li>
+															";
+                                                }
                                             ?>
 									</ul>
 									

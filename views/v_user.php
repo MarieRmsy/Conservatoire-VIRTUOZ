@@ -1,13 +1,4 @@
-<html>
-	<head>
-		<title>Virtuoz</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/perso.css" />
-		<link rel="stylesheet" href="./modules/modal/modal.css"/>
-	</head>
-	<body class="is-preload homepage">
+
 		<div id="page-wrapper">			<!-- Main -->
             <div id="main-wrapper">
 					<div class="container">
@@ -18,17 +9,20 @@
 									<!-- Content -->
 										<article>
 
-											<h2>Bonjour <?= $userData['prenom']; ?> <?= $userData['nom']; ?></h2>
-                                            <?php
+											<h2>Bonjour <?= $userData['prenom']; ?> <?= $userData['nom']; ?>
+                                            
+											
+											<?php
                                                 if($userData['rank'] == "admin")
                                                 {
-                                                    echo "<div style='background-color: green; color: white; font-weight: bold;'>God mod activated</div>";
+                                                    echo "<span class='adminUser icon solid fa-chevron-right'> Administrateur</span>";
                                                 }
                                                 if($userData['rank'] == "user")
                                                 {
-                                                    echo "<div style='background-color: red; color: white; font-weight: bold;'>God mod desactivated</div>";
+                                                    echo "<span class='memberUser icon solid fa-chevron-right'> Membre</span>";
                                                 }
                                             ?>
+											</h2>
 
 										</article>
 
@@ -39,17 +33,15 @@
 
 									<!-- Sidebar -->
 										<section>
-											<h3>Subheading</h3>
+											
+										<a href="index.php?action=logout" class="button deconnect icon solid fa-sign-out-alt">Se déconnecter</a>
+										</section>
+
+										<h3>Subheading</h3>
 											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
 											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
 											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
 											consequat etiam.</p>
-											<footer>
-												<a href="#" class="button icon solid fa-info-circle">Find out more</a>
-											</footer>
-										</section>
-
-										<a style="color: red; border: 1px solid red; padding: 10px; border-radius: 5px;" href="index.php?action=logout">Se déconnecter</a>
 
 								</div>
 							</div>
@@ -57,6 +49,3 @@
 					</div>
 				</div>
 		</div>
-		
-	</body>
-</html>

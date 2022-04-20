@@ -1,1 +1,15 @@
 Paramétrer pour que le password ne soit pas vide lors de l'inscription
+
+Parametrer les modal lorsque les infos correspondent pas (connexion avec autre que email)
+
+Redirection automatique vers une page d'erreur si url fausse
+
+Trier la liste des cours par instrument ?
+
+ADMIN : 
+-Pouvoir supprimer une personne d'un cours dans la liste d'inscription
+-Supprimer et ajouter un cours depuis la paeg cours
+
+USER :
+-Editer les informations de son compte depuis sa page membre
+-Empecher user d'aller manuellement sur la page action=ADMIN
