@@ -17,3 +17,12 @@ ADMIN :
 USER :
 -Editer les informations de son compte depuis sa page membre
 -Empecher user d'aller manuellement sur la page action=ADMIN
+
+
+//
+
+changer User/admin to =>adherent
+
+renommer adherent to user
+
+inscription marche plus

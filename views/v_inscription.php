@@ -19,7 +19,7 @@
 												<input id="formPhoneRegister" name="formPhoneRegister" type="text" placeholder="Téléphone" required><br>
 												<input id="formAdressRegister" name="formAdressRegister" type="text" placeholder="Adresse postale" required><br>
 												<input type="hidden" name="do" value="register">
-												<button id="registerForm" type="submit">S'enregistrer</button>
+												<button id="slide-down-btn" type="submit">S'enregistrer</button>
 											</form>
 											
 											<div id="slide-down-modal" class="modal tl">
@@ -89,23 +89,23 @@
 		<script src="assets/js/autocomplete.js" type="text/javascript"></script>
 		<script>
 			// Script Slide down effect
-			// $(document).ready(function(){
+			$(document).ready(function(){
 
-			// $("#registerForm").click( function()
-			// 	{
-			// 		$("#slide-down-modal").slideDown('slow/400/fast', function() {
-			// 		$("#slide-down-modal").css("display", "block");  	
-			// 		});
-			// 	}
-			// );
+			$("#slide-down-btn").click( function()
+				{
+					$("#slide-down-modal").slideDown('slow/400/fast', function() {
+					$("#slide-down-modal").css("display", "block");  	
+					});
+				}
+			);
 
-			// $("#slide-down-close").click( function()
-			// 	{
-			// 		$("#slide-down-modal").slideUp('slow/400/fast', function() {
-			// 		$("#slide-down-modal").css("display", "none");  	
-			// 		});
-			// 	}
-			// );
+			$("#slide-down-close").click( function()
+				{
+					$("#slide-down-modal").slideUp('slow/400/fast', function() {
+					$("#slide-down-modal").css("display", "none");  	
+					});
+				}
+			);
 				
-			// });
+			});
 		</script>

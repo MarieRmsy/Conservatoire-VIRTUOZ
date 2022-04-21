@@ -68,9 +68,6 @@ switch($action)
 		die;
 	}
 
-	$inscriptionsModel = new Inscriptions;
-	$getInscriptions = $inscriptionsModel->get($bdd, $userData['id']);
-
 	// Vérifier que la session existe
 	if( $userData === false )
 	{
@@ -88,6 +85,10 @@ switch($action)
 		header('location: index.php?action=connexion');
 		die;
 	}
+
+	$inscriptionsModel = new Inscriptions;
+	$getInscriptions = $inscriptionsModel->get($bdd, $userData['id']);
+
 	include("views/v_userCourses.php");
 	break;
 

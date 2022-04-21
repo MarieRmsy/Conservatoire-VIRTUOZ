@@ -24,12 +24,7 @@
                                             ?>
 											</h2>
 
-											<?php 
-											foreach($getInscriptions as $item)
-											{
-												var_dump($item);
-											}
-											?>
+
 
 										</article>
 

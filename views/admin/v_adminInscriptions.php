@@ -24,7 +24,7 @@
 														<th>Cours</th>
 														<th>Instrument</th>
 														<th>Professeur</th>
-														<th>Rejoindre</th>
+														<th>Supprimer</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -36,7 +36,6 @@
 															<td> <?php echo $item['horaires']; ?></td>
 															<td> <?php echo $item['instruNom']; ?></td>
 															<td> <?php echo $item['profNom']; echo "&nbsp;"; echo $item['profPrenom']; ?></td>
-															<td> <?php echo $item[8]; ?></td>
 															<td>Supprimer</td>
 													</tr>
 													<?php endforeach;?>
