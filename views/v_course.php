@@ -59,11 +59,11 @@
 															<td> <?php echo $cours[2]; ?></td>
 															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?>
 															<?php
-																if( isset($_SESSION['user_id']) )
+																if( isset($_SESSION['user_id']) and $userData['rank'] != "admin"  )
 																{
-																	?>
-																		<td id="slide-down-btn-Inscript<?= $cours[0]; ?>"><button style="font-size: 70%;">S'inscrire</button></td>
-																	<?php
+																?>
+																	<td id="slide-down-btn-Inscript<?= $cours[0]; ?>"><button style="font-size: 70%;">S'inscrire</button></td>
+																<?php
 																}
 																else
 																{

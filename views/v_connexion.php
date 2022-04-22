@@ -3,7 +3,7 @@
             <div id="main-wrapper">
 					<div class="container">
 						<div class="row gtr-200">
-							<div class="col-8 col-12-medium">
+							<div class="col-6 col-12-medium">
 								<div id="content">
 
 									<!-- Content -->
@@ -60,7 +60,7 @@
 
 								</div>
 							</div>
-							<div class="col-4 col-12-medium">
+							<div class="col-6 col-12-medium">
 								<div id="sidebar">
 
 									<!-- Sidebar -->

@@ -80,9 +80,15 @@ switch($action)
 
 // USER COURS
  case 'userCourses' :
-	if( !isset($_SESSION['user_id']) )
+	if( !isset($_SESSION['user_id']))
 	{
 		header('location: index.php?action=connexion');
+		die;
+	}
+
+	if( $userData['rank'] != "user" )
+	{
+		header('location: index.php?action=user');
 		die;
 	}
 
@@ -105,7 +111,7 @@ switch($action)
 
 // ADMIN COURS
  case 'adminCourses' :
-	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
+	if( !isset($_SESSION['user_id']) or $userData['rank'] != "admin" )
 	{
 		header('location: index.php?action=connexion');
 		die;
@@ -125,7 +131,7 @@ switch($action)
 	
 // ADMIN INSCRIPTIONS 
  case 'adminInscriptions' :
-	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
+	if( !isset($_SESSION['user_id']) or $userData['rank'] != "admin" )
 	{
 		header('location: index.php?action=connexion');
 		die;
@@ -139,7 +145,7 @@ switch($action)
 
 // ADMIN MEMBRES
  case 'adminUsers' :
-	if( !isset($_SESSION['user_id']) and $userData['rank'] != "admin" )
+	if( !isset($_SESSION['user_id']) or $userData['rank'] != "admin" )
 	{
 		header('location: index.php?action=connexion');
 		die;

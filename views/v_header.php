@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="assets/css/perso.css" />
 		<link rel="stylesheet" href="assets/weavy/weavy.css"/>
 		<link rel="stylesheet" href="./modules/modal/modal.css"/>
+		<link rel="icon" type="image/png" href="images/virtuozIcon.png"/>
 		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
 		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"> </script>
 

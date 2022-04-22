@@ -133,7 +133,7 @@
 									</br>
 									<div id="feedbackAdd" style="display:none;font-weight:bold;"></div>
 									<form id="addCoursForm">
-											<input id="formHorairesAddCours" name="formHorairesAddCours" type="text" placeholder="Lundi 17h"><br/>
+											<input id="formHorairesAddCours" name="formHorairesAddCours" type="date" placeholder="Lundi 17h"><br/>
 											<input id="formNbplacesAddCours" name="formNbplacesAddCours" type="number" placeholder="Nombre de places"><br>
 											<select id="formProfAddCours" name="formProfAddCours">
 												<?php

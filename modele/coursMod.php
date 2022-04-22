@@ -37,12 +37,12 @@
             $reqAddRow->bindParam('nbPlace', $nbplace);
             $reqAddRow->bindParam('idProf', $idprof);
             $reqAddRow->bindParam('idInstru', $idinstru);
+
             if($reqAddRow->execute())
             {
                 return true;
-            }
-            else
-            {
+            } 
+            else {
                 return false;
             }
         }

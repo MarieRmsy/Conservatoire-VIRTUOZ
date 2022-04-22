@@ -10,7 +10,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="modules/disk.scss" />
+		<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+		<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+
 		<script src="assets/js/jquery.min.js"></script>
 		
 	</head>
@@ -28,10 +30,10 @@
 								<h2>Bienvenue !</h2>
 								<p style="font-size:30px;">Développez votre passion </br>pour la musique</p>
 							</div>
-							<div class="col-4 col-12-medium">
+							<div class="col-3 col-12-medium">
 								<img class="set-img" src="images/teacher.gif" alt="" />
 							</div>
-							<div class="col-4 col-12-medium">
+							<div class="col-5 col-12-medium">
 								<ul>
 									<li><a href="index.php?action=course" class="button large icon solid fa-arrow-circle-right">Cours</a></li>
 									<li><a href="index.php?action=inscription" class="button large alt icon solid fa-question-circle">Inscriptions</a></li>
@@ -41,51 +43,88 @@
 					</div>
 				</div>
 
+
 			<!-- Features -->
-				<div id="features-wrapper">
+				<div id="features-wrapper" style="margin-top:4em;">
 					<div class="container">
+						<div class="chibiTitre">
+							Virtuoz, le tout premier conservatoire à proposer vos cours en ligne !
+						</div>
+						
 						<div class="row">
-							<div class="col-4 col-12-medium">
+							<div class="col-2 col-12-medium chibiMain">
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/chibis/pink1.png" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/chibis/basse3.png" alt="" /></a>
 										<div class="inner">
 											<header>
-												<h2>Put something here</h2>
-												<p>Maybe here as well I think</p>
+												<h2><a href=""><span class="icon solid fa-angle-right"></span> Basse</a></h2>
 											</header>
-											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
 										</div>
 									</section>
 
 							</div>
-							<div class="col-4 col-12-medium">
+							<div class="col-2 col-12-medium chibiMain">
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/chibis/batterie3.png" alt="" /></a>
 										<div class="inner">
 											<header>
-												<h2>An interesting title</h2>
-												<p>This is also an interesting subtitle</p>
+												<h2><a href=""><span class="icon solid fa-angle-right"></span> Batterie</a></h2>
 											</header>
-											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
 										</div>
 									</section>
 
 							</div>
-							<div class="col-4 col-12-medium">
+							<div class="col-2 col-12-medium chibiMain">
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/chibis/guitare3.png" alt="" /></a>
 										<div class="inner">
 											<header>
-												<h2>Oh, and finally ...</h2>
-												<p>Here's another intriguing subtitle</p>
+												<h2><a href=""><span class="icon solid fa-angle-right"></span> Guitare</a></h2>
 											</header>
-											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+									</section>
+
+							</div>
+							<div class="col-2 col-12-medium chibiMain">
+
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/chibis/keytar3.png" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2><a href=""><span class="icon solid fa-angle-right"></span> Keytar</a></h2>
+											</header>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-2 col-12-medium chibiMain">
+
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/chibis/piano3.png" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2><a href=""><span class="icon solid fa-angle-right"></span> Piano</a></h2>
+											</header>
+										</div>
+									</section>
+
+							</div>
+							<div class="col-2 col-12-medium chibiMain">
+
+								<!-- Box -->
+									<section class="box feature">
+										<a href="#" class="image featured"><img src="images/chibis/violon3.png" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2><a href=""><span class="icon solid fa-angle-right"></span> Violon</a></h2>
+											</header>
 										</div>
 									</section>
 
@@ -143,6 +182,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
 
 	</body>
 </html>

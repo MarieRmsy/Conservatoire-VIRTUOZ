@@ -26,3 +26,19 @@ changer User/admin to =>adherent
 renommer adherent to user
 
 inscription marche plus
+
+readme/doc sur drive
+
+user -> member
+
+ajouter niveau a utilisateur
+
+rank => grade
+
+montantPaye (montant pas bool (double pas int))
+
+horaire => date
+
+arrivée slow des instruments dans main
+
+BASE NE SE MET PAS A JOUR apres avoir supprimé un user (liste inscription) => Vérifier si l'utilisateur existe encore

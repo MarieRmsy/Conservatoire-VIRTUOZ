@@ -19,7 +19,7 @@
                                                 }
                                                 if($userData['rank'] == "user")
                                                 {
-                                                    echo "<span class='memberUser icon solid fa-chevron-right'> Membre</span>";
+                                                    echo "<span class='memberUser icon solid fa-chevron-right'> Adhérent</span>";
                                                 }
                                             ?>
 											</h2>

@@ -1496,6 +1496,8 @@ input, select, textarea {
 
 	form input[type="text"],
 	form input[type="email"],
+	form input[type="date"],
+	form input[type="number"],
 	form input[type="password"],
 	form select,
 	form textarea {
@@ -1515,6 +1517,8 @@ input, select, textarea {
 		}
 
 	form input[type="text"],
+	form input[type="date"],
+	form input[type="number"],
 	form input[type="email"],
 	form input[type="password"] {
 		line-height: 3em;
@@ -1600,7 +1604,6 @@ input, select, textarea {
 		}
 
 		.image.featured {
-			height: 50% !important;
 			display: block;
 			width: 100%;
 			margin: 0 0 2.5em 0;
@@ -1792,7 +1795,9 @@ input, select, textarea {
 		}
 
 			.box.feature .inner {
-				padding: 6em 2em 1em 2em;
+				/* padding: 6em 2em 1em 2em; */
+				padding: 1em 0em 1em 2em;
+
 			}
 
 			.box.feature h2 {
