@@ -11,7 +11,8 @@ function connectBDD(){
 
         // $username = "mariermadmin";
         // $password = "fy0xn1OT5GF9XU00YROcNtzq7p2d6O";
-        // $dbh = new PDO('mysql:host=mariermadmin.mysql.db;dbname=mariermadmin', $username,$password);        
+        // $dbh = new PDO('mysql:host=mariermadmin.mysql.db;dbname=mariermadmin', $username,$password);
+                
         $dbh->exec('SET NAMES utf8');
         return $dbh;
     }
