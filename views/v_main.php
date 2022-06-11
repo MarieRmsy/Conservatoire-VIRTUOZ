@@ -36,7 +36,14 @@
 							<div class="col-5 col-12-medium">
 								<ul>
 									<li><a href="index.php?action=course" class="button large icon solid fa-arrow-circle-right">Cours</a></li>
-									<li><a href="index.php?action=inscription" class="button large alt icon solid fa-question-circle">Inscriptions</a></li>
+									<?php
+                                                if($userData['rank'] !== "user" || $userData['rank'] !== "admin")
+                                                {
+                                                    echo "<li><a href='index.php?action=inscription' class='button large alt icon solid fas fa-edit'>Inscriptions</a></li>";
+                                                }
+                                            ?>
+											
+									
 								</ul>
 							</div>
 						</div>
@@ -140,6 +147,5 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			
-
 	</body>
 </html>

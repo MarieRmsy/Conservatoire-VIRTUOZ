@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/perso.css" />
+		<link rel="stylesheet" href="assets/notes/notes.css" />
 		<link rel="stylesheet" href="assets/weavy/weavy.css"/>
 		<link rel="stylesheet" href="./modules/modal/modal.css"/>
 		<link rel="icon" type="image/png" href="images/virtuozIcon.png"/>
@@ -17,14 +18,16 @@
 			
 			<!-- Header -->
 			<div id="header-wrapper">
+			
+			<?php include 'assets/notes/notes.html';?>
 					<header id="header" class="container">
 						<!-- Logo -->
 							<div id="logo">
 								<h1><a href="index.php">Virtuoz</a></h1>
 								<span class="set-aca">Academy</span>
 								<?php include 'assets/weavy/weavy.html';?>
-								
 							</div>
+							
 
 						<!-- Nav -->
 							<!-- <div style="background-color:red !important"> -->
@@ -33,11 +36,11 @@
 										<li class='target' id='target1'><a href="index.php?action=main">Accueil</a></li>
 										<li class='target' id='target2'>
 											<a href="index.php?action=course">Cours</a>
-											<ul>
+											<!-- <ul>
 												<li><a href="#">Piano</a></li>
 												<li><a href="#">Guitare</a></li>
 												<li><a href="#">Trompette</a></li>
-											</ul>
+											</ul> -->
 										</li>
 										
 										<?php	
@@ -90,6 +93,6 @@
 </div>
 
 <script src="assets/weavy/weavy.js" type="text/javascript"></script>
-
+<script  src="assets/notes/scriptNotes.js"></script>
 
 	</body>

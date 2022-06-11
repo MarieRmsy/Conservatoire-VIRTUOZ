@@ -30,10 +30,10 @@
 										<article>
 										
 
-									<h3>Adresse : <span class="userInfo"><?= $userData[4]; ?></span></h3>
-									<h3>Email : <span class="userInfo"><?= $userData[5]; ?></span></h3>
-									<h3>Numéro de téléphone : <span class="userInfo"><?= $userData[3]; ?></span></h3>
-									<h3>Votre niveau : <span class="userInfo"><?= $userData[5]; ?></span></h3>
+									<h3> <i class="fas fa-home"></i> Adresse : <span class="userInfo"><?= $userData[4]; ?></span></h3>
+									<h3> <i class="fas fa-envelope"></i> Email : <span class="userInfo"><?= $userData[5]; ?></span></h3>
+									<h3> <i class="fas fa-phone-alt"></i> Numéro de téléphone : <span class="userInfo"><?= $userData[3]; ?></span></h3>
+									<h3> <i class="fas fa-music"></i> Votre niveau : <span class="userInfo"><?= $userData[5]; ?></span></h3>
 									
 								</article>
 
@@ -46,7 +46,9 @@
 										<section>
 											
 										<a href="index.php?action=logout" class="button deconnect icon solid fa-sign-out-alt">Se déconnecter</a>
-										</section>
+										
+										<img style="width: 80%; margin-top: 3em;" src="images/chibis/group1.png" alt="" />
+									</section>
 
 								</div>
 							</div>
