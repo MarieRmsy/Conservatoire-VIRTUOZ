@@ -27,6 +27,15 @@
 
 
 										</article>
+										<article>
+										
+
+									<h3>Adresse : <span class="userInfo"><?= $userData[4]; ?></span></h3>
+									<h3>Email : <span class="userInfo"><?= $userData[5]; ?></span></h3>
+									<h3>Numéro de téléphone : <span class="userInfo"><?= $userData[3]; ?></span></h3>
+									<h3>Votre niveau : <span class="userInfo"><?= $userData[5]; ?></span></h3>
+									
+								</article>
 
 								</div>
 							</div>
@@ -38,12 +47,6 @@
 											
 										<a href="index.php?action=logout" class="button deconnect icon solid fa-sign-out-alt">Se déconnecter</a>
 										</section>
-<!-- 
-										<h3>Subheading</h3>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam.</p> -->
 
 								</div>
 							</div>

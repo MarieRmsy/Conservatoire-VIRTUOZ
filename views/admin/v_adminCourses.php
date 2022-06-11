@@ -41,10 +41,10 @@
 															<td><button class="slide-down-btn-Delete<?= $cours[0]; ?>" style="font-size: 75%;">Supprimer</button>
 															<!-- DEL MODAL -->
 															<div id="slide-down-modal-Delete<?= $cours[0]; ?>" class="modal tl">
-																	<div class="content">
+																	<div class="content" style="height: 30%;">
 																		<h3>Êtes-vous sûre de vouloir supprimer ce cours ?</h3>
 																		<hr>
-																		<?= $cours[0]; ?>
+																		Numéro du cours : <?= $cours[0]; ?>
 																		</br>
 																		
 																		<button id="InscriptionOK" class="button icon solid fa-check-circle deleteCours" attr-idcours="<?= $cours[0]; ?>">Oui, supprimer</button>

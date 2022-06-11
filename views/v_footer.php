@@ -1,7 +1,8 @@
 			<!-- Footer -->
+			
             <div id="footer-wrapper">
 					<footer id="footer" class="container">
-					<h2>Informations pratiques</h2>
+					<h2 style="color: #71cbca">Informations pratiques</h2>
 						<div class="row">
 							<div class="col-3 col-6-medium col-12-small">
 
@@ -24,7 +25,6 @@
 										<ul class="style2">
 											<li>Téléphone : 06 74 24 54 29</li>
 											<li>Mail : virtuozContact@academy.fr</li>
-											<li>Fax : Sed porttitor cras in erat nec</a></li>
 										</ul>
 									</section>
 

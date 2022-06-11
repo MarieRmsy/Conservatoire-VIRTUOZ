@@ -75,6 +75,8 @@ switch($action)
 		die;
 	}
 
+	$getUsers = getAdherent();
+	
 	include("views/v_user.php");
 	break;
 

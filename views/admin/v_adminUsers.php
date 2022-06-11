@@ -10,7 +10,7 @@
 										<article>
 
 											<h2>
-												Gestion des cours
+												Liste des utilisateurs
 												<span>
 													<a href="#" id="slide-down-btn-User" style="font-size: 0.6em;font-weight:bold;" class="button icon solid fa-mouse-pointer">?</a>
 												</span>
