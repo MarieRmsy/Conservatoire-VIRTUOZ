@@ -4,7 +4,7 @@ require_once("modele/userMod.php");
 require_once("modele/coursMod.php");
 require_once("modele/instruMod.php");
 require_once("modele/profMod.php");
-require_once("modele/inscriptionsMod.php");
+require_once("modele/inscriptionSiteMod.php");
 
 $bdd = connectBDD();
 
@@ -47,9 +47,9 @@ switch($action)
 	break;
 
 // INSCRIPTION
- case 'inscription' :
+ case 'inscriptionSite' :
 
-	include("views/v_inscription.php");
+	include("views/v_inscriptionSite.php");
 	break;
 
 // CONNEXION
@@ -76,7 +76,7 @@ switch($action)
 	}
 
 	$getUsers = getAdherent();
-	
+
 	include("views/v_user.php");
 	break;
 
@@ -94,8 +94,8 @@ switch($action)
 		die;
 	}
 
-	$inscriptionsModel = new Inscriptions;
-	$getInscriptions = $inscriptionsModel->get($bdd, $userData['id']);
+	$inscriptionSiteModel = new Inscriptions;
+	$getInscriptions = $inscriptionSiteModel->get($bdd, $userData['id']);
 
 	include("views/v_userCourses.php");
 	break;
@@ -139,8 +139,8 @@ switch($action)
 		die;
 	}
 
-	$inscriptionsModel = new Inscriptions;
-	$getInscriptions = $inscriptionsModel->get($bdd);
+	$inscriptionSiteModel = new Inscriptions;
+	$getInscriptions = $inscriptionSiteModel->get($bdd);
 
 	include("views/admin/v_adminInscriptions.php");
 	break;

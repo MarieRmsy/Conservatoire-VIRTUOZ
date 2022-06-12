@@ -41,7 +41,7 @@
 										<a href="index.php?action=adminUsers" class="image featured"><img src="images/image3.png" alt="" /></a>
 										<div class="inner">
 											<header>
-												<h2>Gestion des membres</h2>
+												<h2>Gestion des utilisateurs</h2>
 												<p>Here's another intriguing subtitle</p>
 											</header>
                                         </div>

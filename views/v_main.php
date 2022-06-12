@@ -37,9 +37,9 @@
 								<ul>
 									<li><a href="index.php?action=course" class="button large icon solid fa-arrow-circle-right">Cours</a></li>
 									<?php
-                                                if($userData['rank'] !== "user" || $userData['rank'] !== "admin")
+                                                if($userData['rank'] == 'none')
                                                 {
-                                                    echo "<li><a href='index.php?action=inscription' class='button large alt icon solid fas fa-edit'>Inscriptions</a></li>";
+                                                    echo "<li><a href='index.php?action=inscriptionSite' class='button large alt icon solid fas fa-edit'>Inscriptions</a></li>";
                                                 }
                                             ?>
 											

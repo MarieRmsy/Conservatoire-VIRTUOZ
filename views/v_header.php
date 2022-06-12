@@ -48,7 +48,7 @@
 												if($userData['rank'] == 'none') // IF NO CONNECTED
 												{
 													echo "<li><a href='index.php?action=connexion'>Connexion</a></li>
-													<li><a href='index.php?action=inscription'>Inscription</a></li>";
+													<li><a href='index.php?action=inscriptionSite'>Inscription</a></li>";
 												}
 												else // IF CONNECTED
                                                 {

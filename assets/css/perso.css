@@ -116,3 +116,30 @@
   width: 100%;
   margin-bottom: 1em;
 }
+
+/* POP UP */
+
+.hide {
+  padding: 0.5em;
+  font-size: 20px;
+  line-height: 20px;
+  width: 300px !important;
+  border: solid 2px #71cbca;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  color: #cecece;
+}
+    
+.myDIV:hover + .hide {
+  
+  display:block;
+}
+
+.myDIV button {
+  cursor: not-allowed !important;
+  font-size: 1em;
+  background-color: rgb(173, 173, 173);
+}

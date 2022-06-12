@@ -142,7 +142,7 @@
 														echo "<option value='".$item['profId']."'>".$item['profPrenom']." ".$item['profNom']."</option>";
 													}
 												?>
-											</select>
+											</select><br>
 											<select id="formInstruAddCours" name="formInstruAddCours">
 												<?php
 													foreach($getInstru as $item)
@@ -150,7 +150,7 @@
 														echo "<option value='".$item['instruId']."'>".$item['instruNom']."</option>";
 													}
 												?>
-											</select>
+											</select><br>
 											<input type="hidden" name="do" value="addCours">
 											<button type="submit">Ajouter</button>
 									</form>

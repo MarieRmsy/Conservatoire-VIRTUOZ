@@ -49,6 +49,21 @@
 													</tr>
 												</thead>
 												<tbody>
+													
+												<!-- 
+<div class="popover-parent">
+<a href="#" class="popover-link">
+  <i>&#9733;</i>
+</a>
+<div class="popover bottom">
+  <i>&#9734;</i>
+  <i>&#9729;</i>
+  <i>&#9742;</i>
+</div>
+</div> -->
+
+
+												
 													<?php 
 													foreach ($getCours as $cours) :?>
 													
@@ -67,7 +82,16 @@
 																}
 																else
 																{
-																	echo "<td><button style='font-size: 70%; background-color: grey; cursor: not-allowed;' disabled>S'inscrire</button></td>";
+																	echo "
+																	<td>
+																		<div class='myDIV'>
+																			<button class='popover-link' disabled>S'inscrire</button>
+																		</div>
+																		<div class='hide'>
+																			Connectez-vous pour vous inscrire au cours !
+																		</div>
+																	</td>
+																		";
 																}
 															?>
 
@@ -81,7 +105,7 @@
 																		</br>
 
 																		<button class="button icon solid fa-check-circle subscribeCours" attr-coursid="<?= $cours[0]; ?>" >Oui</button>
-																		<button class="button icon fa-times-circle slide-down-close-Inscript<?= $cours[0]; ?>">Non, annuler</button>
+																		<button class="button icon fa-times-circle slide-down-close-Inscript<?= $cours[0]; ?>">Fermer</button>
 
 																	</div>
 																	<span class="close slide-down-close-Inscript<?= $cours[0]; ?>">&times;</span>
@@ -162,4 +186,23 @@
 						</div>
 					</div>
 				</div>
+
+				<script>
+					$(document).ready(function() {
+					$('.popover-parent > .popover-link').click(function() {
+					$('.popover-parent > .popover-link').not(this).parent().removeClass('active');
+					$(this).parent().toggleClass('active');
+					});
+																			
+					// Hide popover when clicked off
+					$('html').click(function() {
+					$('.popover-parent.active').removeClass('active');
+					});
+					// Don't include the popover
+					$('.popover, .popover-parent > .popover-link').click(function(e) {
+					e.stopPropagation();
+					});
+
+					});
+				</script>
 
