@@ -36,7 +36,7 @@
 															<?php
 																if( isset($_SESSION['user_id']) and $userData['rank'] == "membre"  ){
 
-																	echo "<td id='slide-down-btn-Inscript<?= $cours[0]; ?>'><button style='font-size: 70%;'>S'inscrire</button></td>";
+																	echo "<td id='slide-down-btn-Inscript".$cours[0]."'><button style='font-size: 70%;'>S'inscrire</button></td>";
 
 																} elseif( isset($_SESSION['user_id']) and $userData['rank'] == "admin"  ) {
 
