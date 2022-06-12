@@ -34,10 +34,10 @@
 													
 													<tr class="item_row">
 														<td> <?php echo $user[1]; echo "&nbsp;"; echo $user[2]; ?></td>
-														<td> <?php echo $user[5]; ?></td>
 														<td> <?php echo $user[3]; ?></td>
 														<td> <?php echo $user[4]; ?></td>
-														<td> <?php echo $user[7]; ?></td>
+														<td> <?php echo $user[5]; ?></td>
+														<td> <?php echo $user[6]; ?></td>
 														<td>Supprimer</td>
 													</tr>
 													<?php endforeach;?>

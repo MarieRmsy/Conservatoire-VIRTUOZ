@@ -15,13 +15,16 @@
 											<?php
                                                 if($userData['rank'] == "admin")
                                                 {
-                                                    echo "<span class='adminUser icon solid fa-chevron-right'> Administrateur</span>";
+                                                    echo "<span class='adminUser icon solid fa-chevron-right'> Administrateur</span>
+													<span style='color: #be3f3f; font-size: 30px; ' class='icon solid fas fa-user-shield'></span>";
                                                 }
                                                 if($userData['rank'] == "user")
                                                 {
-                                                    echo "<span class='memberUser icon solid fa-chevron-right'> Adhérent</span>";
+                                                    echo "<span class='memberUser icon solid fa-chevron-right'> Adhérent</span>
+													<span style='color: #71c771;; font-size: 30px; ' class='icon solid fas fa-user-graduate'></span>";
                                                 }
                                             ?>
+											
 											</h2>
 
 

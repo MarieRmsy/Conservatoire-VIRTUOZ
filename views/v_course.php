@@ -34,24 +34,18 @@
 															<td> <?php echo $cours[2]; ?></td>
 															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?>
 															<?php
-																if( isset($_SESSION['user_id']) and $userData['rank'] != "admin"  )
-																{
-																?>
-																	<td id="slide-down-btn-Inscript<?= $cours[0]; ?>"><button style="font-size: 70%;">S'inscrire</button></td>
-																<?php
+																if( isset($_SESSION['user_id']) and $userData['rank'] == "user"  ){
+
+																	echo "<td id='slide-down-btn-Inscript<?= $cours[0]; ?>'><button style='font-size: 70%;'>S'inscrire</button></td>";
+
+																} elseif( isset($_SESSION['user_id']) and $userData['rank'] == "admin"  ) {
+
+																	echo "<td><button class='disabled' disabled>S'inscrire</button></td>";
 																}
-																else
-																{
-																	echo "
-																	<td>
-																		<div class='myDIV'>
-																			<button class='popover-link' disabled>S'inscrire</button>
-																		</div>
-																		<div class='hide'>
-																			Connectez-vous pour vous inscrire au cours !
-																		</div>
-																	</td>
-																		";
+																else {
+																	
+																	echo "<td><div class='myDIV'><button class='popover-link' disabled>S'inscrire</button></div>
+																		<div class='hide'>Connectez-vous pour vous inscrire au cours !</div></td>";
 																}
 															?>
 

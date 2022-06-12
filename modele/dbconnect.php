@@ -25,7 +25,7 @@ function connectBDD(){
 }
 
 function getCourses(){
-    $req = "SELECT * FROM cours
+    $req = "SELECT id, horaires, nbPlace, idProf, idInstru FROM cours
     INNER JOIN professeur ON cours.idProf = professeur.profId
     INNER JOIN instrument ON cours.idInstru = instrument.instruId";
 
@@ -37,7 +37,7 @@ function getCourses(){
 }
 
 function getInstru(){
-    $req = "SELECT * FROM instrument";
+    $req = "SELECT instruNum, instruId FROM instrument";
 
     $exe = connectBDD()->prepare($req);
     $exe->execute();
@@ -47,7 +47,7 @@ function getInstru(){
 }
 
 function getAdherent(){
-    $req = "SELECT * FROM adherent";
+    $req = "SELECT id, nom, prenom, mail, tel, adresse, rank FROM adherent";
 
     $exe = connectBDD()->prepare($req);
     $exe->execute();

@@ -143,3 +143,9 @@
   font-size: 1em;
   background-color: rgb(173, 173, 173);
 }
+
+.disabled {
+  cursor: not-allowed !important;
+  font-size: 1em;
+  background-color: rgb(173, 173, 173);
+}

@@ -37,11 +37,12 @@
 								<ul>
 									<li><a href="index.php?action=course" class="button large icon solid fa-arrow-circle-right">Cours</a></li>
 									<?php
-                                                if($userData['rank'] == 'none')
-                                                {
+                                                if($userData['rank'] == 'none') {
                                                     echo "<li><a href='index.php?action=inscriptionSite' class='button large alt icon solid fas fa-edit'>Inscriptions</a></li>";
-                                                } else {
+                                                } elseif ($userData['rank'] == 'user') {
 													echo "<li><a href='index.php?action=userCourses' class='button large alt icon solid fas fa-book'>Mes Cours</a></li>";
+												} elseif ($userData['rank'] == 'admin') {
+													echo "<li><a href='index.php?action=admin' class='button large alt icon solid fas fa-server'>Administration</a></li>";
 												}
                                             ?>
 											
