@@ -40,7 +40,7 @@
 									<?php
                                                 if($userData['rank'] == 'none') {
                                                     echo "<li><a href='index.php?action=inscriptionSite' class='button large alt icon solid fas fa-edit'>Inscriptions</a></li>";
-                                                } elseif ($userData['membre'] == 'user') {
+                                                } elseif ($userData['rank'] == 'membre') {
 													echo "<li><a href='index.php?action=userCourses' class='button large alt icon solid fas fa-book'>Mes Cours</a></li>";
 												} elseif ($userData['rank'] == 'admin') {
 													echo "<li><a href='index.php?action=admin' class='button large alt icon solid fas fa-server'>Administration</a></li>";

@@ -27,8 +27,6 @@
 											
 											</h2>
 
-
-
 										</article>
 										<article>
 										
