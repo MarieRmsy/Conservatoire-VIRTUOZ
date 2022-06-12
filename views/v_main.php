@@ -40,7 +40,9 @@
                                                 if($userData['rank'] == 'none')
                                                 {
                                                     echo "<li><a href='index.php?action=inscriptionSite' class='button large alt icon solid fas fa-edit'>Inscriptions</a></li>";
-                                                }
+                                                } else {
+													echo "<li><a href='index.php?action=userCourses' class='button large alt icon solid fas fa-book'>Mes Cours</a></li>";
+												}
                                             ?>
 											
 									

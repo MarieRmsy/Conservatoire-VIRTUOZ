@@ -60,8 +60,8 @@
 														<a href='index.php?action=admin'>Administration</a>
 															<ul>
 																<li><a href='index.php?action=adminCourses'>Gestion des cours</a></li>
-																<li><a href='index.php?action=adminInscriptions'>Gestion des inscriptions</a></li>
-																<li><a href='index.php?action=adminUsers'>Gestion des membres</a></li>
+																<li><a href='index.php?action=adminInscriptions'>Liste des inscriptions</a></li>
+																<li><a href='index.php?action=adminUsers'>Liste des membres</a></li>
 																
 															</ul>
 														</li>

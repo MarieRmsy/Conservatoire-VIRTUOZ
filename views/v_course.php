@@ -2,39 +2,13 @@
             <div id="main-wrapper">
 					<div class="container">
 						<div class="row gtr-200">
-							<div class="col-4 col-12-medium">
-								<div id="sidebar">
-
-									<!-- Sidebar -->
-										<section>
-											
-											<h3>Horaires d'ouverture</h3>
-											<ul>
-												<li>Lundi : 8:00-20:00</li>
-												<li>Mardi : 8:00-20:00</li>
-												<li>Mercredi : 12:00-21:00</li>
-												<li>Jeudi : 8:00-18:00</li>
-												<li>Vendredi : 8:00-22:00</li>
-												<li>Samedi : 7:00-12:00</li>
-												<li>Dimanche : Fermé</li>
-											</ul>
-										</section>
-
-										<section>
-											<h3>Fermetures exceptionnelles</h3>
-											<p>Le conservatoire est fermé pendant les représentations privées, les vacances scolaires ainsi que les périodes d'examens.</p>
-
-										</section>
-
-								</div>
-							</div>
-							<div class="col-8 col-12-medium imp-medium">
+						<div class="col-8 col-12-medium imp-medium">
 								<div id="content">
 
 									<!-- Content -->
 										<article>
 
-											<h2>Cours :</h2>
+											<h2>Cours en ligne <span class="icon solid fas fa-laptop"></span></h2>
 											
 											<table>
 												<thead>
@@ -49,20 +23,6 @@
 													</tr>
 												</thead>
 												<tbody>
-													
-												<!-- 
-<div class="popover-parent">
-<a href="#" class="popover-link">
-  <i>&#9733;</i>
-</a>
-<div class="popover bottom">
-  <i>&#9734;</i>
-  <i>&#9729;</i>
-  <i>&#9742;</i>
-</div>
-</div> -->
-
-
 												
 													<?php 
 													foreach ($getCours as $cours) :?>
@@ -183,6 +143,33 @@
 
 								</div>
 							</div>
+							<div class="col-4 col-12-medium">
+								<div id="sidebar">
+
+									<!-- Sidebar -->
+										<section>
+											
+											<h3>Horaires d'ouverture</h3>
+											<ul>
+												<li>Lundi : 8:00-20:00</li>
+												<li>Mardi : 8:00-20:00</li>
+												<li>Mercredi : 12:00-21:00</li>
+												<li>Jeudi : 8:00-18:00</li>
+												<li>Vendredi : 8:00-22:00</li>
+												<li>Samedi : 7:00-12:00</li>
+												<li>Dimanche : Fermé</li>
+											</ul>
+										</section>
+
+										<section>
+											<h3>Fermetures exceptionnelles</h3>
+											<p>Le conservatoire est fermé pendant les représentations privées, les vacances scolaires ainsi que les périodes d'examens.</p>
+
+										</section>
+
+								</div>
+							</div>
+							
 						</div>
 					</div>
 				</div>

@@ -9,7 +9,7 @@
 							<!-- Content -->
 								<article>
 
-									<h2>Mes inscriptions à mes cours</h2>
+									<h2>Mes inscriptions à mes cours <span class="icon solid fas fa-book"></span></h2>
 
 											<table>
 												<thead>

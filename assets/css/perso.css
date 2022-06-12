@@ -86,11 +86,11 @@
 
 /* Déconnexion */
 .deconnect {
-  background: #be3f3f;
+  background: #be3f3f !important;
 }
 
 .deconnect:hover {
-  background: #942b2b;
+  background: #942b2b !important;
 }
 
 /* Users */
@@ -123,14 +123,14 @@
   padding: 0.5em;
   font-size: 20px;
   line-height: 20px;
-  width: 300px !important;
+  width: 250px !important;
   border: solid 2px #71cbca;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   display: none;
   position: absolute;
   z-index: 1000;
-  color: #cecece;
+  color: #a5a5a5;
 }
     
 .myDIV:hover + .hide {
