@@ -88,7 +88,7 @@ switch($action)
 		die;
 	}
 
-	if( $userData['rank'] != "user" )
+	if( $userData['rank'] != "membre" )
 	{
 		header('location: index.php?action=user');
 		die;

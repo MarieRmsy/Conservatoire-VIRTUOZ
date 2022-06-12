@@ -47,7 +47,7 @@ function getInstru(){
 }
 
 function getAdherent(){
-    $req = "SELECT id, nom, prenom, mail, tel, adresse, rank FROM adherent";
+    $req = "SELECT id, nom, prenom, mail, tel, adresse, rank FROM utilisateur";
 
     $exe = connectBDD()->prepare($req);
     $exe->execute();

@@ -14,7 +14,7 @@ class User
         $mdp = password_hash($mdp,PASSWORD_DEFAULT);
 
         // Vérifier sur l'utilsiateur existe déjà
-        $checkIfEmailExist = $bdd->prepare("SELECT * FROM adherent WHERE mail=:mail");
+        $checkIfEmailExist = $bdd->prepare("SELECT * FROM utilisateur WHERE mail=:mail");
         $checkIfEmailExist->bindParam('mail', $mail);
         $checkIfEmailExist->execute();
         $result = $checkIfEmailExist->fetchAll();
@@ -25,7 +25,7 @@ class User
         }
 
         // Creer compte utilisateur
-        $req_addUser = $bdd->prepare('INSERT INTO adherent(nom,prenom,tel,adresse,mail,mdp) VALUES(?,?,?,?,?,?)');
+        $req_addUser = $bdd->prepare('INSERT INTO utilisateur(nom,prenom,tel,adresse,mail,mdp) VALUES(?,?,?,?,?,?)');
         if ( $req_addUser->execute([$nom,$prenom,$tel,$adresse,$mail,$mdp]) )
         {
             return true;
@@ -40,7 +40,7 @@ class User
     public function login($bdd, $mail, $mdp)
     {
         // Récupérer les données de l'utilsiateur ayant l'email choisi
-        $checkIfEmailExist = $bdd->prepare("SELECT * FROM adherent WHERE mail=:mail");
+        $checkIfEmailExist = $bdd->prepare("SELECT * FROM utilisateur WHERE mail=:mail");
         $checkIfEmailExist->bindParam('mail', $mail);
         $checkIfEmailExist->execute();
         $userTested = $checkIfEmailExist->fetchAll();
@@ -68,7 +68,7 @@ class User
     public function getUserById($bdd, $userId)
     {
         // Récupérer les données de l'utilsiateur ayant un ID précis
-        $searchUser = $bdd->prepare("SELECT * FROM adherent WHERE id=:id");
+        $searchUser = $bdd->prepare("SELECT * FROM utilisateur WHERE id=:id");
         $searchUser->bindParam('id', $userId);
         $searchUser->execute();
         $userTested = $searchUser->fetchAll();

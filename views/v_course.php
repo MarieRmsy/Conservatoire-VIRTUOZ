@@ -34,7 +34,7 @@
 															<td> <?php echo $cours[2]; ?></td>
 															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?>
 															<?php
-																if( isset($_SESSION['user_id']) and $userData['rank'] == "user"  ){
+																if( isset($_SESSION['user_id']) and $userData['rank'] == "membre"  ){
 
 																	echo "<td id='slide-down-btn-Inscript<?= $cours[0]; ?>'><button style='font-size: 70%;'>S'inscrire</button></td>";
 
@@ -45,7 +45,7 @@
 																else {
 																	
 																	echo "<td><div class='myDIV'><button class='popover-link' disabled>S'inscrire</button></div>
-																		<div class='hide'>Connectez-vous pour vous inscrire au cours !</div></td>";
+																		<div class='hide'>Connectez-vous pour vous inscrire aux cours !</div></td>";
 																}
 															?>
 

@@ -5,6 +5,6 @@ document.getElementById("formFirstnameRegister").addEventListener("input", funct
         console.log( "NAME is invalid (Empty)" )
     } else {
         console.log( `NAME vddalue is: ${this.value}` );
-        $('#nom').text(`${this.value}`);
+        $('#nom').text(`, ${this.value}`);
     }
 });

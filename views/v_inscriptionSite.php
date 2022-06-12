@@ -74,7 +74,7 @@
 									<!-- Sidebar -->
 
 										<section>
-											<h3>Rejoignez le 1er conservatoire d'Europe, <span id="nom"></span> !</h3>
+											<h3>Rejoignez le 1er conservatoire numérique d'Europe<span id="nom"></span> !</h3>
 											<footer>
 												<a href="#" class="button icon solid fa-info-circle">Find out more</a>
 											</footer>

@@ -61,13 +61,13 @@
 															<ul>
 																<li><a href='index.php?action=adminCourses'>Gestion des cours</a></li>
 																<li><a href='index.php?action=adminInscriptions'>Liste des inscriptions</a></li>
-																<li><a href='index.php?action=adminUsers'>Liste des membres</a></li>
+																<li><a href='index.php?action=adminUsers'>Liste des utilisateurs</a></li>
 																
 															</ul>
 														</li>
 														";
 													}
-													else if($userData['rank'] == "user") // IF USER
+													else if($userData['rank'] == "membre") // IF USER
 													{
 														echo "<li><a href='index.php?action=userCourses'>Mes cours</a></li>";
 
