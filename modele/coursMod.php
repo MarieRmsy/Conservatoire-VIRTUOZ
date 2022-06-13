@@ -29,11 +29,11 @@
             }
         }
 
-        public function add(object $bdd, string $horaires, int $nbplace, int $idprof, int $idinstru)
+        public function add(object $bdd, string $date, int $nbplace, int $idprof, int $idinstru)
         {
-            $sqlAddRow = 'INSERT INTO cours(horaires,nbPlace,idProf,idInstru) VALUES(:horaires,:nbPlace,:idProf,:idInstru)';
+            $sqlAddRow = 'INSERT INTO cours(date,nbPlace,idProf,idInstru) VALUES(:date,:nbPlace,:idProf,:idInstru)';
             $reqAddRow = $bdd->prepare($sqlAddRow);
-            $reqAddRow->bindParam('horaires', $horaires);
+            $reqAddRow->bindParam('date', $date);
             $reqAddRow->bindParam('nbPlace', $nbplace);
             $reqAddRow->bindParam('idProf', $idprof);
             $reqAddRow->bindParam('idInstru', $idinstru);

@@ -4,7 +4,7 @@ require_once("modele/userMod.php");
 require_once("modele/coursMod.php");
 require_once("modele/instruMod.php");
 require_once("modele/profMod.php");
-require_once("modele/inscriptionSiteMod.php");
+require_once("modele/inscriptionMod.php");
 
 $bdd = connectBDD();
 
@@ -94,8 +94,28 @@ switch($action)
 		die;
 	}
 
-	$inscriptionSiteModel = new Inscriptions;
-	$getInscriptions = $inscriptionSiteModel->get($bdd, $userData['id']);
+	$inscriptionModel = new Inscriptions;
+	$getInscriptions = $inscriptionModel->get($bdd, $userData['id']);
+
+	include("views/v_userCourses.php");
+	break;
+
+//PDF 
+ case 'pdfInscription' :
+	if( !isset($_SESSION['user_id']))
+	{
+		header('location: index.php?action=connexion');
+		die;
+	}
+
+	if( $userData['rank'] != "membre" )
+	{
+		header('location: index.php?action=user');
+		die;
+	}
+
+	$inscriptionModel = new Inscriptions;
+	$getInscriptions = $inscriptionModel->get($bdd, $userData['id']);
 
 	include("views/v_userCourses.php");
 	break;
@@ -139,8 +159,8 @@ switch($action)
 		die;
 	}
 
-	$inscriptionSiteModel = new Inscriptions;
-	$getInscriptions = $inscriptionSiteModel->get($bdd);
+	$inscriptionModel = new Inscriptions;
+	$getInscriptions = $inscriptionModel->get($bdd);
 
 	include("views/admin/v_adminInscriptions.php");
 	break;

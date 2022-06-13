@@ -32,3 +32,5 @@ horaire => date
 arrivée slow des instruments dans main
 
 BASE NE SE MET PAS A JOUR apres avoir supprimé un user (liste inscription) => Vérifier si l'utilisateur existe encore
+
+COURS QUI DIS SPARU SPARU ! apres s'être inscrit

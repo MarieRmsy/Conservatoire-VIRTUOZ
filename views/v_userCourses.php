@@ -19,7 +19,6 @@
 														<th>Instrument</th>
 														<th>Professeur</th>
 														<th>Billet</th>
-														<th>Supprimer</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -27,12 +26,13 @@
 													foreach ($getInscriptions as $item) :?>
 													
 													<tr class="item_row">
-															<td> <?php echo $item['nom']; echo "&nbsp;"; echo $item['prenom']; ?></td>
-															<td> <?php echo $item['horaires']; ?></td>
-															<td> <?php echo $item['instruNom']; ?></td>
-															<td> <?php echo $item['profNom']; echo "&nbsp;"; echo $item['profPrenom']; ?></td>
-															<td><a href="./test/test_pdf_1.php">pdf</a></td>
-															<td>Supprimer</td>
+															<td> <?= $item['nom']; echo "&nbsp;"; echo $item['prenom']; ?></td>
+															<td> <?= $item['date']; ?></td>
+															<td> <?= $item['instruNom']; ?></td>
+															<td> <?= $item['profNom']; echo "&nbsp;"; echo $item['profPrenom']; ?></td>
+															<!-- <td><a href="./pdf/pdfInscription.php">pdf</a></td> -->
+															<td> <?= "<a href=\"./pdf/pdfInscription.php?idAdh=".$item['idAdh']."&idCours=".$item['idCours']."\" target='blank_'>PDF</a>" ?></td>
+															
 													</tr>
 													<?php endforeach;?>
 												</tbody>

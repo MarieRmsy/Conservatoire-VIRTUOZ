@@ -33,7 +33,7 @@
 													
 													<tr class="item_row">
 															<td> <?php echo $item['nom']; echo "&nbsp;"; echo $item['prenom']; ?></td>
-															<td> <?php echo $item['horaires']; ?></td>
+															<td> <?php echo $item['date']; ?></td>
 															<td> <?php echo $item['instruNom']; ?></td>
 															<td> <?php echo $item['profNom']; echo "&nbsp;"; echo $item['profPrenom']; ?></td>
 															<td>Supprimer</td>

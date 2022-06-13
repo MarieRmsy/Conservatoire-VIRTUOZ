@@ -3,7 +3,7 @@
 require_once("modele/dbconnect.php");
 require_once("modele/userMod.php");
 require_once("modele/coursMod.php");
-require_once("modele/inscriptionSiteMod.php");
+require_once("modele/inscriptionMod.php");
 
 // Connexion à la BDD
 $bdd = connectBDD();
