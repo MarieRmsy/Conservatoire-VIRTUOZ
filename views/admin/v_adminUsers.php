@@ -25,7 +25,6 @@
 														<th>Tel</th>
 														<th>Adresse</th>
 														<th>Profil</th>
-														<th>Rejoindre</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -38,7 +37,6 @@
 														<td> <?php echo $user[4]; ?></td>
 														<td> <?php echo $user[5]; ?></td>
 														<td> <?php echo $user[6]; ?></td>
-														<td>Supprimer</td>
 													</tr>
 													<?php endforeach;?>
 												</tbody>

@@ -18,7 +18,7 @@
 														<th>Cours</th>
 														<th>Instrument</th>
 														<th>Professeur</th>
-														<th>Billet</th>
+														<th>Attestation</th>
 													</tr>
 												</thead>
 												<tbody>

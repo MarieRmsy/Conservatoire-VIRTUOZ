@@ -9,7 +9,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="index.php?action=adminInscriptions" class="image featured"><img src="images/image2.png" alt="" /></a>
+										<a href="index.php?action=adminInscriptions" class="image featured"><img src="images/2image.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>Liste des inscriptions</h2>
@@ -23,8 +23,7 @@
 							<div class="col-4 col-12-medium">
 
 								<!-- Box -->
-									<section class="box feature">
-										<a href="index.php?action=adminCourses" class="image featured"><img src="images/image1.png" alt="" /></a>
+									<section class="box feature"><a href="index.php?action=adminCourses" class="image featured"><img src="images/1image.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>Gestion des cours</h2>
@@ -39,7 +38,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="index.php?action=adminUsers" class="image featured"><img src="images/image3.png" alt="" /></a>
+										<a href="index.php?action=adminUsers" class="image featured"><img src="images/3image.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2>Liste des utilisateurs</h2>

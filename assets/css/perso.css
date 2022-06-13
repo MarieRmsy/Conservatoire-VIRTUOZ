@@ -12,7 +12,7 @@
 }
 
 .set-img:hover {
-    opacity: 80%;
+    opacity: 98% !important;
 }
 
 .set-aca {
@@ -115,6 +115,10 @@
   text-align: center;
   width: 100%;
   margin-bottom: 1em;
+}
+
+.chibi:hover {
+  opacity: 50% !important;
 }
 
 /* POP UP */

@@ -35,9 +35,9 @@
 													<tr class="item_row rowid-<?php echo $cours[0]; ?>">
 															<td> <?php echo $cours[0]; ?></td>
 															<td> <?php echo $cours[1]; ?></td>
-															<td> <?php echo $cours[9]; ?></td>
+															<td> <?php echo $cours[10]; ?></td>
 															<td> <?php echo $cours[2]; ?></td>
-															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?></td>
+															<td> <?php echo $cours[8]; echo "&nbsp;"; echo $cours[7]; ?>
 															<td><button class="slide-down-btn-Delete<?= $cours[0]; ?>" style="font-size: 75%;">Supprimer</button>
 															<!-- DEL MODAL -->
 															<div id="slide-down-modal-Delete<?= $cours[0]; ?>" class="modal tl">

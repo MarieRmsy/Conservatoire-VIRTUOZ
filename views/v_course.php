@@ -2,7 +2,7 @@
             <div id="main-wrapper">
 					<div class="container">
 						<div class="row gtr-200">
-						<div class="col-8 col-12-medium imp-medium">
+						<div class="col-9 col-12-medium imp-medium">
 								<div id="content">
 
 									<!-- Content -->
@@ -30,9 +30,9 @@
 													<tr class="item_row">
 															<td> <?php echo $cours[0]; ?></td>
 															<td> <?php echo $cours[1]; ?></td>
-															<td> <?php echo $cours[9]; ?></td>
+															<td> <?php echo $cours[10]; ?></td>
 															<td> <?php echo $cours[2]; ?></td>
-															<td> <?php echo $cours[6]; echo "&nbsp;"; echo $cours[7]; ?>
+															<td> <?php echo $cours[8]; echo "&nbsp;"; echo $cours[7]; ?>
 															<?php
 																if( isset($_SESSION['user_id']) and $userData['rank'] == "membre"  ){
 
@@ -137,7 +137,7 @@
 
 								</div>
 							</div>
-							<div class="col-4 col-12-medium">
+							<div class="col-3 col-12-medium">
 								<div id="sidebar">
 
 									<!-- Sidebar -->

@@ -3,7 +3,7 @@
             <div id="main-wrapper">
 					<div class="container">
 						<div class="row gtr-200">
-							<div class="col-8 col-12-medium">
+							<div class="col-10 col-12-medium">
 								<div id="content">
 
 									<!-- Content -->
@@ -24,7 +24,6 @@
 														<th>Cours</th>
 														<th>Instrument</th>
 														<th>Professeur</th>
-														<th>Supprimer</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -36,8 +35,7 @@
 															<td> <?php echo $item['date']; ?></td>
 															<td> <?php echo $item['instruNom']; ?></td>
 															<td> <?php echo $item['profNom']; echo "&nbsp;"; echo $item['profPrenom']; ?></td>
-															<td>Supprimer</td>
-													</tr>
+														</tr>
 													<?php endforeach;?>
 												</tbody>
 												
@@ -45,12 +43,6 @@
 											
 										</article>
 
-										<?php
-											foreach($getInscriptions as $item)
-											{
-												var_dump($item);
-											}
-										?>
 
 								</div>
 							</div>

@@ -66,7 +66,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/chibis/basse3.png" alt="" /></a>
+										<a class="image featured"><img class="chibi" src="images/chibis/basse3.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2><a href=""><span class="icon solid fa-angle-right"></span> Basse</a></h2>
@@ -79,7 +79,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/chibis/batterie3.png" alt="" /></a>
+										<a class="image featured"><img class="chibi" src="images/chibis/batterie3.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2><a href=""><span class="icon solid fa-angle-right"></span> Batterie</a></h2>
@@ -92,7 +92,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/chibis/guitare3.png" alt="" /></a>
+										<a class="image featured"><img class="chibi" src="images/chibis/guitare3.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2><a href=""><span class="icon solid fa-angle-right"></span> Guitare</a></h2>
@@ -104,7 +104,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/chibis/keytar3.png" alt="" /></a>
+										<a class="image featured"><img class="chibi" src="images/chibis/keytar3.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2><a href=""><span class="icon solid fa-angle-right"></span> Keytar</a></h2>
@@ -117,7 +117,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/chibis/piano3.png" alt="" /></a>
+										<a class="image featured"><img class="chibi" src="images/chibis/piano3.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2><a href=""><span class="icon solid fa-angle-right"></span> Piano</a></h2>
@@ -130,7 +130,7 @@
 
 								<!-- Box -->
 									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/chibis/violon3.png" alt="" /></a>
+										<a class="image featured"><img class="chibi" src="images/chibis/violon3.png" alt="" /></a>
 										<div class="inner">
 											<header>
 												<h2><a href=""><span class="icon solid fa-angle-right"></span> Violon</a></h2>
